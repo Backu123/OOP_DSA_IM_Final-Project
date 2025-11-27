@@ -51,8 +51,6 @@ namespace QR_Generator_Test_C_
         public void setContactNum (long contactNum)
         {
             this.contactNum = contactNum;
-            this.contactNum = contactNum;
-            this.contactNum = contactNum;
         }
 
 
