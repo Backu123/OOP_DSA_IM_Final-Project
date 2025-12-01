@@ -23,13 +23,8 @@ namespace QR_Generator_Test_C_
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnGenerate_Click(object sender, EventArgs e)
-        {
             string data = textBox1.Text.Trim();
-            if(string.IsNullOrEmpty(data) )
+            if (string.IsNullOrEmpty(data))
             {
                 MessageBox.Show("Please Enter Something.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -41,6 +36,22 @@ namespace QR_Generator_Test_C_
             pictureBox1.Image = qrCodeImage;
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
         }
+
+        private void btnGenerate_Click(object sender, EventArgs e)
+        {
+            /*string data = textBox1.Text.Trim();
+            if(string.IsNullOrEmpty(data) )
+            {
+                MessageBox.Show("Please Enter Something.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            QRCodeGenerator qrGenerator = new QRCodeGenerator();
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.L);
+            QRCode qrCode = new QRCode(qrCodeData);
+            Bitmap qrCodeImage = qrCode.GetGraphic(10);
+            pictureBox1.Image = qrCodeImage;
+            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;*/
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             string data = textBox1.Text.Trim();
@@ -51,7 +62,7 @@ namespace QR_Generator_Test_C_
             }
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
             QRCodeData qrCodeData = qrGenerator.CreateQrCode(data, QRCodeGenerator.ECCLevel.L);
-            QRCode qrCode = new QRCode(qrCodeData);
+            QRCode qrCode = new QRCode(qrCodeData); 
             Bitmap qrCodeImage = qrCode.GetGraphic(10);
 
             string savePath = $@"C:\Users\ASUS\Documents\OOP_DSA_Proj\QR_Generator_Test_C#\QR_Codes\{textBox1.Text}_QR.png";

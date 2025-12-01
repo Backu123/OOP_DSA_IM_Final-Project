@@ -52,7 +52,7 @@
             // btnSave
             // 
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(744, 152);
+            this.btnSave.Location = new System.Drawing.Point(744, 148);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(247, 76);
             this.btnSave.TabIndex = 1;
@@ -101,6 +101,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(401, 58);
             this.textBox1.TabIndex = 5;
+            this.textBox1.Text = "Timothy";
             // 
             // pictureBox1
             // 

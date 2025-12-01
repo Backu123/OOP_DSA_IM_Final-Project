@@ -74,7 +74,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(110, 358);
+            this.button1.Location = new System.Drawing.Point(109, 362);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 41);
             this.button1.TabIndex = 2;
@@ -125,7 +125,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(509, 158);
+            this.label5.Location = new System.Drawing.Point(512, 188);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(113, 25);
             this.label5.TabIndex = 8;
@@ -133,7 +133,7 @@
             // 
             // TB_Username
             // 
-            this.TB_Username.Location = new System.Drawing.Point(629, 158);
+            this.TB_Username.Location = new System.Drawing.Point(632, 188);
             this.TB_Username.Multiline = true;
             this.TB_Username.Name = "TB_Username";
             this.TB_Username.Size = new System.Drawing.Size(246, 25);
@@ -143,7 +143,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(509, 198);
+            this.label6.Location = new System.Drawing.Point(512, 228);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(84, 25);
             this.label6.TabIndex = 10;
@@ -151,7 +151,7 @@
             // 
             // TB_Section
             // 
-            this.TB_Section.Location = new System.Drawing.Point(629, 198);
+            this.TB_Section.Location = new System.Drawing.Point(632, 228);
             this.TB_Section.Multiline = true;
             this.TB_Section.Name = "TB_Section";
             this.TB_Section.Size = new System.Drawing.Size(246, 25);
@@ -161,7 +161,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(509, 236);
+            this.label7.Location = new System.Drawing.Point(512, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(102, 25);
             this.label7.TabIndex = 12;
@@ -169,7 +169,7 @@
             // 
             // TB_Contact
             // 
-            this.TB_Contact.Location = new System.Drawing.Point(629, 236);
+            this.TB_Contact.Location = new System.Drawing.Point(632, 266);
             this.TB_Contact.Multiline = true;
             this.TB_Contact.Name = "TB_Contact";
             this.TB_Contact.Size = new System.Drawing.Size(246, 25);
@@ -179,7 +179,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(509, 274);
+            this.label8.Location = new System.Drawing.Point(512, 304);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 25);
             this.label8.TabIndex = 14;
@@ -187,7 +187,7 @@
             // 
             // TB_Password
             // 
-            this.TB_Password.Location = new System.Drawing.Point(629, 274);
+            this.TB_Password.Location = new System.Drawing.Point(632, 304);
             this.TB_Password.Multiline = true;
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.Size = new System.Drawing.Size(246, 25);
@@ -206,7 +206,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(509, 313);
+            this.label10.Location = new System.Drawing.Point(512, 343);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 25);
             this.label10.TabIndex = 17;
@@ -216,7 +216,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(632, 309);
+            this.radioButton1.Location = new System.Drawing.Point(635, 339);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(76, 29);
             this.radioButton1.TabIndex = 18;
@@ -229,7 +229,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(714, 309);
+            this.radioButton2.Location = new System.Drawing.Point(717, 339);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(98, 29);
             this.radioButton2.TabIndex = 19;
@@ -240,7 +240,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(608, 358);
+            this.button2.Location = new System.Drawing.Point(611, 388);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(179, 45);
             this.button2.TabIndex = 21;
@@ -271,7 +271,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(153, 309);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(102, 25);
+            this.button3.Size = new System.Drawing.Size(102, 43);
             this.button3.TabIndex = 24;
             this.button3.Text = "Send OTP";
             this.button3.UseVisualStyleBackColor = true;

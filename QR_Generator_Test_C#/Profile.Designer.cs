@@ -39,6 +39,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Profile_Role = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,11 +157,33 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(67, 383);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 25);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Role:";
+            // 
+            // Profile_Role
+            // 
+            this.Profile_Role.AutoSize = true;
+            this.Profile_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Profile_Role.Location = new System.Drawing.Point(178, 383);
+            this.Profile_Role.Name = "Profile_Role";
+            this.Profile_Role.Size = new System.Drawing.Size(51, 25);
+            this.Profile_Role.TabIndex = 12;
+            this.Profile_Role.Text = "Role";
+            // 
             // Profile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(452, 506);
+            this.Controls.Add(this.Profile_Role);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.label5);
@@ -193,5 +217,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Profile_Role;
     }
 }

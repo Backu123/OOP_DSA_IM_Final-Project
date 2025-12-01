@@ -1,0 +1,86 @@
+﻿namespace QR_Generator_Test_C_
+{
+    partial class Admin_Event
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.flowEventsPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.createEventButton = new System.Windows.Forms.Button();
+            this.Back = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // flowEventsPanel
+            // 
+            this.flowEventsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.flowEventsPanel.Location = new System.Drawing.Point(39, 69);
+            this.flowEventsPanel.Name = "flowEventsPanel";
+            this.flowEventsPanel.Size = new System.Drawing.Size(838, 465);
+            this.flowEventsPanel.TabIndex = 0;
+            this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            // 
+            // createEventButton
+            // 
+            this.createEventButton.Location = new System.Drawing.Point(667, 27);
+            this.createEventButton.Name = "createEventButton";
+            this.createEventButton.Size = new System.Drawing.Size(210, 36);
+            this.createEventButton.TabIndex = 1;
+            this.createEventButton.Text = "Create an Event";
+            this.createEventButton.UseVisualStyleBackColor = true;
+            this.createEventButton.Click += new System.EventHandler(this.createEventButton_Click);
+            // 
+            // Back
+            // 
+            this.Back.Location = new System.Drawing.Point(39, 27);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.TabIndex = 2;
+            this.Back.Text = "Back";
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // Admin_Event
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(920, 546);
+            this.Controls.Add(this.Back);
+            this.Controls.Add(this.createEventButton);
+            this.Controls.Add(this.flowEventsPanel);
+            this.Name = "Admin_Event";
+            this.Text = "Admin_Event";
+            this.Load += new System.EventHandler(this.Admin_Event_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.FlowLayoutPanel flowEventsPanel;
+        private System.Windows.Forms.Button createEventButton;
+        private System.Windows.Forms.Button Back;
+    }
+}
