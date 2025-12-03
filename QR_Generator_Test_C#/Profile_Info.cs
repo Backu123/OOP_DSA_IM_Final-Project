@@ -31,6 +31,27 @@ namespace QR_Generator_Test_C_
 
         private Profile_Info() { }
 
+        public int userID()
+        {
+            DB db = new DB();
+            String query = "Select ID from users where users.contactNum = @contactNum";
+            int userIDD = 0;
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@contactNum", getContactNum());
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int userID = (int)reader["ID"];
+                    userIDD = userID;
+                }
+                conn.Close();
+                
+            }
+            return userIDD;
+        }
         public String getUsername() => username;
         public String getSection() => section;
         public long getContactNum() => contactNum;

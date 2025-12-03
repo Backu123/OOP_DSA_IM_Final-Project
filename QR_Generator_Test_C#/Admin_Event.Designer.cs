@@ -36,15 +36,15 @@
             // flowEventsPanel
             // 
             this.flowEventsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowEventsPanel.Location = new System.Drawing.Point(39, 69);
+            this.flowEventsPanel.Location = new System.Drawing.Point(21, 60);
             this.flowEventsPanel.Name = "flowEventsPanel";
-            this.flowEventsPanel.Size = new System.Drawing.Size(838, 465);
+            this.flowEventsPanel.Size = new System.Drawing.Size(1149, 517);
             this.flowEventsPanel.TabIndex = 0;
             this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // createEventButton
             // 
-            this.createEventButton.Location = new System.Drawing.Point(667, 27);
+            this.createEventButton.Location = new System.Drawing.Point(950, 14);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(210, 36);
             this.createEventButton.TabIndex = 1;
@@ -54,9 +54,9 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(39, 27);
+            this.Back.Location = new System.Drawing.Point(21, 14);
             this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(75, 23);
+            this.Back.Size = new System.Drawing.Size(112, 36);
             this.Back.TabIndex = 2;
             this.Back.Text = "Back";
             this.Back.UseVisualStyleBackColor = true;
@@ -66,7 +66,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(920, 546);
+            this.ClientSize = new System.Drawing.Size(1182, 589);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.createEventButton);
             this.Controls.Add(this.flowEventsPanel);

@@ -1,6 +1,6 @@
 ﻿namespace QR_Generator_Test_C_
 {
-    partial class SIgn_Up
+    partial class EventPanel
     {
         /// <summary>
         /// Required designer variable.
@@ -65,13 +65,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(59, 233);
+            this.label4.Location = new System.Drawing.Point(13, 115);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "jgsdcdgc";
             // 
-            // SIgn_Up
+            // EventPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "SIgn_Up";
+            this.Name = "EventPanel";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.SIgn_Up_Load);
             this.ResumeLayout(false);

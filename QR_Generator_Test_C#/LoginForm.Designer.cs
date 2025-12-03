@@ -174,6 +174,8 @@
             this.TB_Contact.Name = "TB_Contact";
             this.TB_Contact.Size = new System.Drawing.Size(246, 25);
             this.TB_Contact.TabIndex = 11;
+            this.TB_Contact.Click += new System.EventHandler(this.TB_Contact_Click);
+            this.TB_Contact.TextChanged += new System.EventHandler(this.TB_Contact_TextChanged);
             // 
             // label8
             // 
@@ -268,7 +270,7 @@
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.Location = new System.Drawing.Point(153, 309);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(102, 43);

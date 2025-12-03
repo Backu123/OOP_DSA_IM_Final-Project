@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QR_Generator_Test_C_
 {
-    public partial class SIgn_Up : Form
+    public partial class EventPanel : Form
     {
-        public SIgn_Up()
+        public EventPanel()
         {
             InitializeComponent();
         }

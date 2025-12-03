@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace QR_Generator_Test_C_
 {
@@ -14,7 +15,7 @@ namespace QR_Generator_Test_C_
         private string eventTitle;
         private string eventDescription;
         private string eventCategory;
-        private string eventDuration;
+        private DateTime eventDuration;
         private string eventSetting;
 
         private static createEventClass instance;
@@ -29,29 +30,54 @@ namespace QR_Generator_Test_C_
 
         }
 
-        /*public createEventClass(String eventID, string eventTitle, string eventDescription, string eventCategory, string eventDuration, string eventSetting)
-        {
-            this.eventID = "t5y792";
-            this.eventTitle = eventTitle;
-            this.eventDescription = eventDescription;
-            this.eventCategory = eventCategory;
-            this.eventDuration = eventDuration;
-            this.eventSetting = eventSetting;
-        }*/
-
         public String getEventID() => eventID;
         public string getEventTitle() => eventTitle;
         public string getEventDesc() => eventDescription;
         public string getEventCategory() => eventCategory;
-        public string getEventDuration() => eventDuration;
+        public DateTime getEventDuration() => eventDuration;
         public string getEventSetting() => eventSetting;
 
         public void setEventID(string eventID) => this.eventID = eventID;
         public void setEventTitle(string eventTitle) => this.eventTitle = eventTitle;
         public void setEventDesc(string eventDesc) => this.eventDescription = eventDesc;
         public void setEventCategory(string eventCategory) => this.eventCategory = eventCategory;
-        public void setEventDuration(string eventDuration) => this.eventDuration = eventDuration;
+        public void setEventDuration(DateTime eventDuration) => this.eventDuration = eventDuration;
         public void setEventSetting(string eventSetting) => this.eventSetting = eventSetting;
 
-    }
+        public void InsertEvent(string ID, string title, string desc, string category, DateTime date, string setting)
+        {
+            DB db = new DB();
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                try
+                {
+                    conn.Open();
+
+                    string query = "INSERT INTO events (EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting) " +
+                                   "VALUES (@id, @title, @desc, @category, @date, @setting)";
+
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@id", ID);
+                    cmd.Parameters.AddWithValue("@title", title);
+                    cmd.Parameters.AddWithValue("@desc", desc);
+                    cmd.Parameters.AddWithValue("@category", category);
+                    cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@setting", setting);
+
+                    cmd.ExecuteNonQuery();
+                }
+                catch (Exception ex) 
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                finally
+                {
+                    conn.Close();   
+                }
+                
+            }
+        }
+
+
+}
 }

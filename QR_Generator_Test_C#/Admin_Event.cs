@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -25,10 +27,10 @@ namespace QR_Generator_Test_C_ {
         }
 
 
-        public void AddEventPanel(string ID, string title, string desc, string category, string date, string setting)
+        public void AddEventPanel(string ID, string title, string desc, string category, DateTime date, string setting)
         {
             Panel eventPanel = new Panel();
-            eventPanel.Width = 550;
+            eventPanel.Width = 800;
             eventPanel.Height = 125;
             eventPanel.BorderStyle = BorderStyle.FixedSingle;
             eventPanel.BackColor = Color.White;
@@ -52,7 +54,7 @@ namespace QR_Generator_Test_C_ {
 
             Label lblCategory = new Label();
             lblCategory.Text = "Category: " + category;
-            lblCategory.Location = new Point(300, 45);
+            lblCategory.Location = new Point(450, 45);
             lblCategory.AutoSize = true;
 
             Label lblDate = new Label();
@@ -62,7 +64,7 @@ namespace QR_Generator_Test_C_ {
 
             Label lblLocation = new Label();
             lblLocation.Text = "Location: " + setting;
-            lblLocation.Location = new Point(300, 70);
+            lblLocation.Location = new Point(450, 70);
             lblLocation.AutoSize = true;
 
             eventPanel.Controls.Add(lbID);
@@ -90,6 +92,29 @@ namespace QR_Generator_Test_C_ {
         {
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;
+
+            DB db = new DB();
+            string query = "SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting FROM events where created_by = @username";
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@username", Profile_Info.Instance.getUsername());
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string eventID = reader["EventID"].ToString();
+                    string eventTitle = reader["EventTitle"].ToString();
+                    string eventDesc = reader["EventDesc"].ToString();
+                    string eventCategory = reader["EventCategory"].ToString();
+                    DateTime eventDuration = (DateTime)reader["EventDate"];
+                    string eventSetting = reader["EventSetting"].ToString();
+
+                    AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, eventDuration, eventSetting);
+                }
+                conn.Close();
+            }
         }
 
         private void Back_Click(object sender, EventArgs e)
@@ -98,5 +123,7 @@ namespace QR_Generator_Test_C_ {
             dashboard.Show();
             this.Hide();
         }
+
+        
     }
 }

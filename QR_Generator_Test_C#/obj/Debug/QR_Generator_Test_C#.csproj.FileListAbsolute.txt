@@ -106,7 +106,6 @@ C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Profile.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.QR_Generator.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Properties.Resources.resources
-C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.SIgn_Up.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C#.csproj.GenerateResource.cache
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C#.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Gener.8D6FA679.Up2Date
@@ -115,3 +114,4 @@ C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Event_page.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Admin_Event.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.CreateEventForm.resources
+C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.EventPanel.resources

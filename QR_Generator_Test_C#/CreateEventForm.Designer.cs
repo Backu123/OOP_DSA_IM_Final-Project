@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
+            this.Button_ID = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -166,10 +167,12 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(184, 292);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(237, 22);
             this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button2
             // 
@@ -182,11 +185,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // Button_ID
+            // 
+            this.Button_ID.Location = new System.Drawing.Point(346, 79);
+            this.Button_ID.Name = "Button_ID";
+            this.Button_ID.Size = new System.Drawing.Size(75, 25);
+            this.Button_ID.TabIndex = 15;
+            this.Button_ID.Text = "Create ID";
+            this.Button_ID.UseVisualStyleBackColor = true;
+            this.Button_ID.Click += new System.EventHandler(this.Button_ID_Click);
+            // 
             // CreateEventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(495, 519);
+            this.Controls.Add(this.Button_ID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
@@ -203,6 +217,7 @@
             this.Controls.Add(this.label1);
             this.Name = "CreateEventForm";
             this.Text = "CreateEventForm";
+            this.Load += new System.EventHandler(this.CreateEventForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,5 +239,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button Button_ID;
     }
 }

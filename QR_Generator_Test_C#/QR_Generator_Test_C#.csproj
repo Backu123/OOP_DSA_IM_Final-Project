@@ -150,11 +150,11 @@
       <DependentUpon>Profile.cs</DependentUpon>
     </Compile>
     <Compile Include="Profile_Info.cs" />
-    <Compile Include="SIgn_Up.cs">
+    <Compile Include="EventPanel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SIgn_Up.Designer.cs">
-      <DependentUpon>SIgn_Up.cs</DependentUpon>
+    <Compile Include="EventPanel.Designer.cs">
+      <DependentUpon>EventPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -200,8 +200,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SIgn_Up.resx">
-      <DependentUpon>SIgn_Up.cs</DependentUpon>
+    <EmbeddedResource Include="EventPanel.resx">
+      <DependentUpon>EventPanel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
