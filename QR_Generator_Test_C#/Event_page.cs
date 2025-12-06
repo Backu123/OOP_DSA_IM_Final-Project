@@ -25,13 +25,50 @@ namespace QR_Generator_Test_C_
             this.Hide();
         }
 
+        public static string ShowInputDialog(string title, string prompt)
+        {
+            Form form = new Form();
+            Label label = new Label();
+            TextBox textBox = new TextBox();
+            Button buttonOk = new Button();
+            Button buttonCancel = new Button();
+
+            form.Text = title;
+            form.StartPosition = FormStartPosition.CenterScreen;
+            form.FormBorderStyle = FormBorderStyle.FixedDialog;
+            form.MinimizeBox = false;
+            form.MaximizeBox = false;
+            form.ClientSize = new Size(300, 150);
+
+            label.Text = prompt;
+            label.SetBounds(10, 20, 280, 20);
+
+            textBox.SetBounds(10, 50, 280, 25);
+
+            buttonOk.Text = "OK";
+            buttonOk.SetBounds(115, 90, 75, 30);
+            buttonOk.DialogResult = DialogResult.OK;
+
+            buttonCancel.Text = "Cancel";
+            buttonCancel.SetBounds(200, 90, 75, 30);
+            buttonCancel.DialogResult = DialogResult.Cancel;
+
+            form.Controls.AddRange(new Control[] { label, textBox, buttonOk, buttonCancel });
+            form.AcceptButton = buttonOk;
+            form.CancelButton = buttonCancel;
+
+            DialogResult result = form.ShowDialog();
+
+            return (result == DialogResult.OK) ? textBox.Text : null;
+        }
+
         public void AddEventPanel(string ID, string title, string desc, string category, DateTime date, string setting)
         {
             Panel eventPanel = new Panel();
             eventPanel.Width = 800;
             eventPanel.Height = 125;
             eventPanel.BorderStyle = BorderStyle.FixedSingle;
-            eventPanel.BackColor = Color.White;
+            eventPanel.BackColor = Color.Gray;
             eventPanel.Margin = new Padding(10);
 
             Label lbID = new Label();
@@ -71,7 +108,7 @@ namespace QR_Generator_Test_C_
             eventPanel.Controls.Add(lblCategory);
             eventPanel.Controls.Add(lblDate);
             eventPanel.Controls.Add(lblLocation);
-
+            eventPanel.Click += Panel_Click;
             flowEventsPanel.Controls.Add(eventPanel);
         }
 
@@ -80,9 +117,34 @@ namespace QR_Generator_Test_C_
         {
 
         }
+        private void Panel_Click(object sender, EventArgs e)
+        {
+            string inputPass = ShowInputDialog("Validation", "Please re-enter your password: ");
+            inputPass = inputPass.Trim();
+            try
+            {
+                if (inputPass.Equals(Profile_Info.Instance.getPassword()))
+                {
+                    User_Event user_Event = new User_Event();
+                    user_Event.Show();
+                }
+                else if (string.IsNullOrEmpty(inputPass))
+                {
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Incorrect Password");
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
+        }
         private void Event_page_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;
             DB db = new DB();

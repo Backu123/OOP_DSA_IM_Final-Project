@@ -57,6 +57,7 @@ namespace QR_Generator_Test_C_
         public long getContactNum() => contactNum;
         public String getSex() => sex;
         public String getRole() => role;
+        public String getPassword() => password;    
 
 
         public void setUsername(string username) => this.username = username;

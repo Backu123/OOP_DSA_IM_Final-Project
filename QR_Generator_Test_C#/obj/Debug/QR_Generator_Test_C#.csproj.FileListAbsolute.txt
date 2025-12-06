@@ -115,3 +115,6 @@ C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Admin_Event.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.CreateEventForm.resources
 C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.EventPanel.resources
+C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Scanner_Form.resources
+C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.Create_Admin.resources
+C:\Users\ASUS\Documents\OOP_DSA_Proj\OOP_DSA_IM_Final-Project\QR_Generator_Test_C#\obj\Debug\QR_Generator_Test_C_.User_Event.resources

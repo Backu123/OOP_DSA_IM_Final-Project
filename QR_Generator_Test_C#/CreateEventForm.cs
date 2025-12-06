@@ -87,11 +87,12 @@ namespace QR_Generator_Test_C_
 
         private void Button_ID_Click(object sender, EventArgs e)
         {
-            TB_ID.Text = GenerateEventID();
+            
         }
 
         private void CreateEventForm_Load(object sender, EventArgs e)
         {
+            TB_ID.Text = GenerateEventID();
             TB_ID.Enabled = false;
             dateTimePicker1.CustomFormat = "MMMM-dd-yyyy hh:mm tt";
             dateTimePicker1.MinDate = DateTime.Now;

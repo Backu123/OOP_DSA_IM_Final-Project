@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace QR_Generator_Test_C_
 {
     public partial class LoginForm : Form
@@ -290,83 +291,86 @@ namespace QR_Generator_Test_C_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(TB_Username.Text) || string.IsNullOrWhiteSpace(TB_Section.Text) || string.IsNullOrWhiteSpace(TB_Password.Text) || string.IsNullOrWhiteSpace(TB_Contact.Text) || (radioButton1.Checked == false && radioButton2.Checked == false))
+            if (string.IsNullOrWhiteSpace(TB_Username.Text) ||
+                string.IsNullOrWhiteSpace(comboBox1.Text) ||
+                string.IsNullOrWhiteSpace(TB_Password.Text) ||
+                string.IsNullOrWhiteSpace(TB_Contact.Text) ||
+                (radioButton1.Checked == false && radioButton2.Checked == false))
             {
-                MessageBox.Show("Please Complete the following form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please complete the form.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
-            else
+
+            string role = "User";
+            string rbValue = radioButton1.Checked ? radioButton1.Text : radioButton2.Text;
+
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+
+            // Check if contact number exists
+            string checkQuery = "SELECT COUNT(*) FROM users WHERE contactNum = @contactNum";
+            MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn);
+            checkCmd.Parameters.AddWithValue("@contactNum", TB_Contact.Text);
+
+            db.OpenConnection();
+            int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+            db.CloseConnection();
+
+            if (count > 0)
             {
-
-                DialogResult isAdmin = MessageBox.Show("Are you an admin?", "Access Modifier", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                String role;
-                if (isAdmin == DialogResult.Yes)
-                {
-                    role = "Admin";
-                }
-                else
-                {
-                    role = "User";
-                }
-
-                string rbValue = "";
-                bool isChecked1 = radioButton1.Checked;
-                bool isChecked2 = radioButton2.Checked;
-                if (isChecked1)
-                {
-                    rbValue = radioButton1.Text;
-                }
-                else if (isChecked2)
-                {
-                    rbValue = radioButton2.Text;
-                }
-
-                if (string.IsNullOrWhiteSpace(TB_Username.Text))
-                {
-
-                }
-                else
-                {
-                    DB db = new DB();
-                    MySqlConnection conn = db.GetConnection();
-
-                    string query = "INSERT INTO users(username, section, contactNum, password, sex, role) values (@username, @section, @contactNum, @password, @sex, @role)";
-
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    cmd.Parameters.AddWithValue("@username", TB_Username.Text);
-                    cmd.Parameters.AddWithValue("@section", TB_Section.Text);
-                    cmd.Parameters.AddWithValue("@contactNum", TB_Contact.Text);
-                    cmd.Parameters.AddWithValue("@password", TB_Password.Text);
-                    cmd.Parameters.AddWithValue("@sex", rbValue);
-                    cmd.Parameters.AddWithValue("@role", role);
-
-                    try
-                    {
-                        db.OpenConnection();
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("New Account Created Successfully!");
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        db.CloseConnection();
-                    }
-                }
+                MessageBox.Show("This contact number is already registered. Please use another number.",
+                                "Duplicate Contact Number",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
             }
-            TB_Username.Text = null;
-            TB_Section.Text = null;
-            TB_Password.Text = null;
-            TB_Contact.Text = null;
+
+            string query = "INSERT INTO users(username, section, contactNum, password, sex, role) VALUES (@username, @section, @contactNum, @password, @sex, @role)";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+
+            cmd.Parameters.AddWithValue("@username", TB_Username.Text);
+            cmd.Parameters.AddWithValue("@section", comboBox1.Text);
+            cmd.Parameters.AddWithValue("@contactNum", TB_Contact.Text);
+            cmd.Parameters.AddWithValue("@password", TB_Password.Text);
+            cmd.Parameters.AddWithValue("@sex", rbValue);
+            cmd.Parameters.AddWithValue("@role", role);
+
+            try
+            {
+                db.OpenConnection();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("New Account Created Successfully!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+
+            TB_Username.Clear();
+            comboBox1.Text = "";
+            TB_Password.Clear();
+            TB_Contact.Clear();
             radioButton1.Checked = false;
             radioButton2.Checked = false;
         }
+private void CenterPanel()
+        {
+            mainPanel.Left = (this.ClientSize.Width - mainPanel.Width) / 2;
+            mainPanel.Top = (this.ClientSize.Height - mainPanel.Height) / 2;
+        }
+        
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            this.WindowState = FormWindowState.Maximized;
+            CenterPanel();
+            TB_Password.PasswordChar = '*';
+            loginPass.PasswordChar = '*';
         }
 
         private void TB_Contact_TextChanged(object sender, EventArgs e)
@@ -377,6 +381,71 @@ namespace QR_Generator_Test_C_
         {
             if (string.IsNullOrEmpty(TB_Contact.Text))
                 TB_Contact.Text = "09";
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            TB_Password.Text = "kjwdnkedhnikd";
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Section_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

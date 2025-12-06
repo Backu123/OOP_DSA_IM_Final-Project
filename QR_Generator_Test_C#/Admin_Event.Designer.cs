@@ -31,20 +31,23 @@
             this.flowEventsPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.createEventButton = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowEventsPanel
             // 
             this.flowEventsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.flowEventsPanel.Location = new System.Drawing.Point(21, 60);
+            this.flowEventsPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.flowEventsPanel.Location = new System.Drawing.Point(135, 105);
             this.flowEventsPanel.Name = "flowEventsPanel";
-            this.flowEventsPanel.Size = new System.Drawing.Size(1149, 517);
+            this.flowEventsPanel.Size = new System.Drawing.Size(1139, 542);
             this.flowEventsPanel.TabIndex = 0;
             this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
             // createEventButton
             // 
-            this.createEventButton.Location = new System.Drawing.Point(950, 14);
+            this.createEventButton.Location = new System.Drawing.Point(1064, 59);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(210, 36);
             this.createEventButton.TabIndex = 1;
@@ -54,7 +57,7 @@
             // 
             // Back
             // 
-            this.Back.Location = new System.Drawing.Point(21, 14);
+            this.Back.Location = new System.Drawing.Point(135, 59);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(112, 36);
             this.Back.TabIndex = 2;
@@ -62,17 +65,28 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
+            // mainPanel
+            // 
+            this.mainPanel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.mainPanel.Controls.Add(this.Back);
+            this.mainPanel.Controls.Add(this.createEventButton);
+            this.mainPanel.Controls.Add(this.flowEventsPanel);
+            this.mainPanel.Location = new System.Drawing.Point(33, 36);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1400, 715);
+            this.mainPanel.TabIndex = 3;
+            // 
             // Admin_Event
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 589);
-            this.Controls.Add(this.Back);
-            this.Controls.Add(this.createEventButton);
-            this.Controls.Add(this.flowEventsPanel);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1454, 763);
+            this.Controls.Add(this.mainPanel);
             this.Name = "Admin_Event";
             this.Text = "Admin_Event";
             this.Load += new System.EventHandler(this.Admin_Event_Load);
+            this.mainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -82,5 +96,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowEventsPanel;
         private System.Windows.Forms.Button createEventButton;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }

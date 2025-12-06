@@ -26,6 +26,7 @@ namespace QR_Generator_Test_C_ {
             this.createEventForm = createEventForm;
         }
 
+        
 
         public void AddEventPanel(string ID, string title, string desc, string category, DateTime date, string setting)
         {
@@ -33,8 +34,8 @@ namespace QR_Generator_Test_C_ {
             eventPanel.Width = 800;
             eventPanel.Height = 125;
             eventPanel.BorderStyle = BorderStyle.FixedSingle;
-            eventPanel.BackColor = Color.White;
-            eventPanel.Margin = new Padding(10);
+            eventPanel.BackColor = Color.LightGray;
+            eventPanel.Margin = new Padding(15);
 
             Label lbID = new Label();
             lbID.Text = "Event ID: " + ID;
@@ -73,8 +74,14 @@ namespace QR_Generator_Test_C_ {
             eventPanel.Controls.Add(lblCategory);
             eventPanel.Controls.Add(lblDate);
             eventPanel.Controls.Add(lblLocation);
-
+            eventPanel.Click += Panel_Click;
             flowEventsPanel.Controls.Add(eventPanel);
+        }
+        private void Panel_Click(object sender, EventArgs e)
+        {
+            Scanner_Form scanner_Form = new Scanner_Form();
+            scanner_Form.Show();
+            this.Hide();
         }
 
         private void createEventButton_Click(object sender, EventArgs e)
@@ -88,8 +95,15 @@ namespace QR_Generator_Test_C_ {
 
         }
 
+        private void CenterPanel()
+        {
+            mainPanel.Left = (this.ClientSize.Width - mainPanel.Width) / 2;
+            mainPanel.Top = (this.ClientSize.Height - mainPanel.Height) / 2;
+        }
         private void Admin_Event_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
+            CenterPanel();
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;
 

@@ -129,6 +129,12 @@
     <Compile Include="CreateEventForm.Designer.cs">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Create_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Admin.Designer.cs">
+      <DependentUpon>Create_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Event_page.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,11 +176,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scanner_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scanner_Form.Designer.cs">
+      <DependentUpon>Scanner_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User_Event.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_Event.Designer.cs">
+      <DependentUpon>User_Event.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin_Event.resx">
       <DependentUpon>Admin_Event.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateEventForm.resx">
       <DependentUpon>CreateEventForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_Admin.resx">
+      <DependentUpon>Create_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
@@ -199,9 +220,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="EventPanel.resx">
       <DependentUpon>EventPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scanner_Form.resx">
+      <DependentUpon>Scanner_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User_Event.resx">
+      <DependentUpon>User_Event.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -216,6 +244,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_r3_c1_processed_by_imagy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_r7_c2_processed_by_imagy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -53,10 +53,11 @@ namespace QR_Generator_Test_C_
                 {
                     conn.Open();
 
-                    string query = "INSERT INTO events (EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting) " +
-                                   "VALUES (@id, @title, @desc, @category, @date, @setting)";
+                    string query = "INSERT INTO events (EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting, created_by) " +
+                                   "VALUES (@id, @title, @desc, @category, @date, @setting, @creator)";
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@creator", Profile_Info.Instance.getUsername());
                     cmd.Parameters.AddWithValue("@id", ID);
                     cmd.Parameters.AddWithValue("@title", title);
                     cmd.Parameters.AddWithValue("@desc", desc);
@@ -77,7 +78,6 @@ namespace QR_Generator_Test_C_
                 
             }
         }
+    }
 
-
-}
 }
