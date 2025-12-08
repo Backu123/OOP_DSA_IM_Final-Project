@@ -37,6 +37,8 @@ namespace QR_Generator_Test_C_ {
             eventPanel.BackColor = Color.LightGray;
             eventPanel.Margin = new Padding(15);
 
+            eventPanel.Tag = ID;
+
             Label lbID = new Label();
             lbID.Text = "Event ID: " + ID;
             lbID.Location = new Point(20, 45);
@@ -79,9 +81,13 @@ namespace QR_Generator_Test_C_ {
         }
         private void Panel_Click(object sender, EventArgs e)
         {
-            Scanner_Form scanner_Form = new Scanner_Form();
-            scanner_Form.Show();
-            this.Hide();
+            if (sender is Panel panel && panel.Tag != null)
+            {
+                string eventID = panel.Tag.ToString();
+                Scanner_Form scanner_Form = new Scanner_Form(eventID);
+                scanner_Form.Show();
+                this.Hide();
+            }
         }
 
         private void createEventButton_Click(object sender, EventArgs e)
@@ -138,6 +144,9 @@ namespace QR_Generator_Test_C_ {
             this.Hide();
         }
 
-        
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

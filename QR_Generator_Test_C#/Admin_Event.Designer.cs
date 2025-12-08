@@ -75,6 +75,7 @@
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1400, 715);
             this.mainPanel.TabIndex = 3;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // Admin_Event
             // 

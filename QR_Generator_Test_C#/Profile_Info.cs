@@ -9,6 +9,8 @@ namespace QR_Generator_Test_C_
 {
     internal class Profile_Info
     {
+        private int ID;
+        private string formattedID;
         private String username;
         private String section;
         private long contactNum;
@@ -31,35 +33,16 @@ namespace QR_Generator_Test_C_
 
         private Profile_Info() { }
 
-        public int userID()
-        {
-            DB db = new DB();
-            String query = "Select ID from users where users.contactNum = @contactNum";
-            int userIDD = 0;
-            using (MySqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@contactNum", getContactNum());
-                MySqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    int userID = (int)reader["ID"];
-                    userIDD = userID;
-                }
-                conn.Close();
-                
-            }
-            return userIDD;
-        }
+        public int userID() => ID;
+        public String getUserID() => formattedID;
         public String getUsername() => username;
         public String getSection() => section;
         public long getContactNum() => contactNum;
         public String getSex() => sex;
         public String getRole() => role;
-        public String getPassword() => password;    
+        public String getPassword() => password;
 
-
+        public void setUserID(int ID) => this.formattedID = $"0325-{ID:0000}";
         public void setUsername(string username) => this.username = username;
         public void setSection(string section) => this.section = section;
         public void setContactNum(long contactNum) => this.contactNum = contactNum;

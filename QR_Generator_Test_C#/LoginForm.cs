@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -240,6 +241,7 @@ namespace QR_Generator_Test_C_
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             Profile_Info.Instance.setUsername(accUsername());
             Profile_Info.Instance.setSection(accSection());
             Profile_Info.Instance.setContactNum(accNum());
@@ -446,6 +448,10 @@ private void CenterPanel()
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TB_Username_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -31,6 +31,7 @@ namespace QR_Generator_Test_C_
 
         private void Profile_Load(object sender, EventArgs e)
         {
+            string studentID = Profile_Info.Instance.getUserID();
             string username = Profile_Info.Instance.getUsername();
             string section = Profile_Info.Instance.getSection();
             string sex = Profile_Info.Instance.getSex();
@@ -40,9 +41,10 @@ namespace QR_Generator_Test_C_
             Profile_Name.Text = username;
             Profile_Section.Text = section;
             Profile_Sex.Text = sex;
-            Profile_Role.Text = role;
+            Profile_ID.Text = studentID;
             Profile_Contact.Text = "0" + contactNum.ToString();
 
+            Profile_ID.Visible = true;
             Profile_Name.Visible = true;
             Profile_Section.Visible = true;
             Profile_Contact.Visible = true;

@@ -135,6 +135,7 @@
             this.TB_Username.Name = "TB_Username";
             this.TB_Username.Size = new System.Drawing.Size(246, 25);
             this.TB_Username.TabIndex = 7;
+            this.TB_Username.Click += new System.EventHandler(this.TB_Username_Click);
             this.TB_Username.TextChanged += new System.EventHandler(this.TB_Username_TextChanged);
             // 
             // label6

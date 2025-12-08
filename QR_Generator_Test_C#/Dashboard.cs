@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ZXing.OneD;
 using MySql.Data.MySqlClient;
+using System.Runtime.InteropServices;
 
 namespace QR_Generator_Test_C_
 {
@@ -41,16 +42,50 @@ namespace QR_Generator_Test_C_
             CenterPanel();
             if (Profile_Info.Instance.getRole() == "Admin")
             {
+                createEventToolStripMenuItem.Visible = true;
+                createAdminMenuItem.Visible = true;
                 adminPanel.Visible = true;
                 userPanel.Visible = false;
             }
             else
             {
+                createEventToolStripMenuItem.Visible = false;
+                createAdminMenuItem.Visible = false;
                 userPanel.Visible = true;
                 adminPanel.Visible = false;
             }
             this.WindowState = FormWindowState.Maximized;
             
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+            string query = "Select ID from users where username = @username";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@username", Profile_Info.Instance.getUsername());
+
+            try
+            {
+                db.OpenConnection();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    int userID = Convert.ToInt32(reader["ID"]);
+                    Profile_Info.Instance.setUserID(userID);
+                }
+                else
+                {
+                    MessageBox.Show("User not found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+            label3.Text = Profile_Info.Instance.getUserID();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,6 +166,11 @@ namespace QR_Generator_Test_C_
         }
 
         private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void adminPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

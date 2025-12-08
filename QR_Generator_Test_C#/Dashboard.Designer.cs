@@ -38,9 +38,10 @@
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.userPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.adminPanel = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.userPanel.SuspendLayout();
             this.adminPanel.SuspendLayout();
@@ -55,7 +56,7 @@
             // 
             // createEventToolStripMenuItem
             // 
-            this.createEventToolStripMenuItem.BackColor = System.Drawing.Color.Cornsilk;
+            this.createEventToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
             this.createEventToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
             this.createEventToolStripMenuItem.Text = "My Events";
@@ -66,6 +67,7 @@
             this.qRGeneratingToolStripMenuItem.Name = "qRGeneratingToolStripMenuItem";
             this.qRGeneratingToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
             this.qRGeneratingToolStripMenuItem.Text = "Generate QR Code";
+            this.qRGeneratingToolStripMenuItem.Visible = false;
             this.qRGeneratingToolStripMenuItem.Click += new System.EventHandler(this.qRGeneratingToolStripMenuItem_Click);
             // 
             // eventsToolStripMenuItem
@@ -84,8 +86,9 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -113,11 +116,11 @@
             this.eventsToolStripMenuItem,
             this.createAdminMenuItem,
             this.profileToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.logoutToolStripMenuItem});
+            this.logoutToolStripMenuItem,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(981, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(981, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -130,13 +133,25 @@
             this.userPanel.Size = new System.Drawing.Size(788, 425);
             this.userPanel.TabIndex = 1;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(254, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(275, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "USER PANEL";
+            // 
             // adminPanel
             // 
+            this.adminPanel.Controls.Add(this.label3);
             this.adminPanel.Controls.Add(this.label2);
             this.adminPanel.Location = new System.Drawing.Point(75, 47);
             this.adminPanel.Name = "adminPanel";
             this.adminPanel.Size = new System.Drawing.Size(788, 499);
             this.adminPanel.TabIndex = 2;
+            this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint);
             // 
             // label2
             // 
@@ -148,15 +163,14 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "ADMIN PANEL";
             // 
-            // label1
+            // label3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(254, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(275, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "USER PANEL";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(365, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(44, 16);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "label3";
             // 
             // Dashboard
             // 
@@ -197,5 +211,6 @@
         private System.Windows.Forms.Panel adminPanel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }
