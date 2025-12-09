@@ -49,7 +49,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(57, 79);
+            this.label1.Location = new System.Drawing.Point(551, 169);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 22);
             this.label1.TabIndex = 0;
@@ -59,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(57, 117);
+            this.label2.Location = new System.Drawing.Point(551, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 22);
             this.label2.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(57, 154);
+            this.label3.Location = new System.Drawing.Point(551, 244);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 22);
             this.label3.TabIndex = 2;
@@ -79,7 +79,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(57, 255);
+            this.label4.Location = new System.Drawing.Point(551, 345);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 22);
             this.label4.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(57, 293);
+            this.label5.Location = new System.Drawing.Point(551, 383);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 22);
             this.label5.TabIndex = 4;
@@ -99,7 +99,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 328);
+            this.label6.Location = new System.Drawing.Point(551, 418);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 22);
             this.label6.TabIndex = 5;
@@ -107,21 +107,21 @@
             // 
             // TB_ID
             // 
-            this.TB_ID.Location = new System.Drawing.Point(184, 79);
+            this.TB_ID.Location = new System.Drawing.Point(678, 169);
             this.TB_ID.Name = "TB_ID";
             this.TB_ID.Size = new System.Drawing.Size(136, 22);
             this.TB_ID.TabIndex = 6;
             // 
             // TB_Title
             // 
-            this.TB_Title.Location = new System.Drawing.Point(184, 117);
+            this.TB_Title.Location = new System.Drawing.Point(678, 207);
             this.TB_Title.Name = "TB_Title";
             this.TB_Title.Size = new System.Drawing.Size(237, 22);
             this.TB_Title.TabIndex = 7;
             // 
             // TB_Desc
             // 
-            this.TB_Desc.Location = new System.Drawing.Point(184, 154);
+            this.TB_Desc.Location = new System.Drawing.Point(678, 244);
             this.TB_Desc.Multiline = true;
             this.TB_Desc.Name = "TB_Desc";
             this.TB_Desc.Size = new System.Drawing.Size(237, 87);
@@ -135,7 +135,7 @@
             "Campus-Wide",
             "College Event",
             "Subject Event"});
-            this.CB_Category.Location = new System.Drawing.Point(184, 255);
+            this.CB_Category.Location = new System.Drawing.Point(678, 345);
             this.CB_Category.Name = "CB_Category";
             this.CB_Category.Size = new System.Drawing.Size(237, 24);
             this.CB_Category.TabIndex = 9;
@@ -149,7 +149,7 @@
             "New CCS Building",
             "Campus Gymnasium",
             "Campus Field"});
-            this.CB_Settings.Location = new System.Drawing.Point(184, 326);
+            this.CB_Settings.Location = new System.Drawing.Point(678, 416);
             this.CB_Settings.Name = "CB_Settings";
             this.CB_Settings.Size = new System.Drawing.Size(237, 24);
             this.CB_Settings.TabIndex = 11;
@@ -157,7 +157,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(132, 389);
+            this.button1.Location = new System.Drawing.Point(626, 479);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(188, 48);
             this.button1.TabIndex = 12;
@@ -168,7 +168,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(184, 292);
+            this.dateTimePicker1.Location = new System.Drawing.Point(678, 382);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(237, 22);
             this.dateTimePicker1.TabIndex = 13;
@@ -177,7 +177,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(373, 468);
+            this.button2.Location = new System.Drawing.Point(867, 558);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 39);
             this.button2.TabIndex = 14;
@@ -187,7 +187,7 @@
             // 
             // Button_ID
             // 
-            this.Button_ID.Location = new System.Drawing.Point(346, 79);
+            this.Button_ID.Location = new System.Drawing.Point(840, 169);
             this.Button_ID.Name = "Button_ID";
             this.Button_ID.Size = new System.Drawing.Size(75, 25);
             this.Button_ID.TabIndex = 15;
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 519);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Button_ID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
@@ -215,6 +215,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateEventForm";
             this.Text = "CreateEventForm";
             this.Load += new System.EventHandler(this.CreateEventForm_Load);

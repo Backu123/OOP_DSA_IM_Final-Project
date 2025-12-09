@@ -30,6 +30,7 @@
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.createEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qRGeneratingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,13 +41,14 @@
             this.accInfo = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.createEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.dashboardToolStripMenuItem,
@@ -57,9 +59,9 @@
             this.profileToolStripMenuItem,
             this.exitToolStripMenuItem,
             this.logoutToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(232, 9);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(699, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
@@ -70,6 +72,14 @@
             this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(96, 24);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
+            // 
+            // createEventToolStripMenuItem
+            // 
+            this.createEventToolStripMenuItem.BackColor = System.Drawing.Color.Cornsilk;
+            this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
+            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
+            this.createEventToolStripMenuItem.Text = "My Events";
+            this.createEventToolStripMenuItem.Click += new System.EventHandler(this.hihihihihihhToolStripMenuItem_Click);
             // 
             // qRGeneratingToolStripMenuItem
             // 
@@ -114,7 +124,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(23, 79);
+            this.pictureBox1.Location = new System.Drawing.Point(155, 104);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(456, 329);
             this.pictureBox1.TabIndex = 7;
@@ -122,7 +132,7 @@
             // 
             // accInfo
             // 
-            this.accInfo.Location = new System.Drawing.Point(498, 79);
+            this.accInfo.Location = new System.Drawing.Point(674, 93);
             this.accInfo.Multiline = true;
             this.accInfo.Name = "accInfo";
             this.accInfo.Size = new System.Drawing.Size(276, 329);
@@ -130,7 +140,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(23, 414);
+            this.button1.Location = new System.Drawing.Point(52, 434);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 37);
             this.button1.TabIndex = 9;
@@ -142,25 +152,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 39);
+            this.label1.Location = new System.Drawing.Point(32, 104);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 29);
             this.label1.TabIndex = 10;
             this.label1.Text = "Your QR Code:";
             // 
-            // createEventToolStripMenuItem
-            // 
-            this.createEventToolStripMenuItem.BackColor = System.Drawing.Color.Cornsilk;
-            this.createEventToolStripMenuItem.Name = "createEventToolStripMenuItem";
-            this.createEventToolStripMenuItem.Size = new System.Drawing.Size(89, 24);
-            this.createEventToolStripMenuItem.Text = "My Events";
-            this.createEventToolStripMenuItem.Click += new System.EventHandler(this.hihihihihihhToolStripMenuItem_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 468);
+            this.ClientSize = new System.Drawing.Size(1262, 721);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.accInfo);

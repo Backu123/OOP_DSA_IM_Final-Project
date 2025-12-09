@@ -378,5 +378,50 @@ namespace QR_Generator_Test_C_
             if (string.IsNullOrEmpty(TB_Contact.Text))
                 TB_Contact.Text = "09";
         }
+
+        private void TB_Username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Section_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
