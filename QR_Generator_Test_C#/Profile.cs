@@ -48,5 +48,10 @@ namespace QR_Generator_Test_C_
             Profile_Contact.Visible = true;
             Profile_Sex.Visible = true;
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

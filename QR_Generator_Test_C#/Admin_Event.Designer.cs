@@ -57,9 +57,9 @@
             this.createEventButton.FlatAppearance.BorderSize = 0;
             this.createEventButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createEventButton.ForeColor = System.Drawing.Color.Transparent;
-            this.createEventButton.Location = new System.Drawing.Point(812, 43);
+            this.createEventButton.Location = new System.Drawing.Point(161, 51);
             this.createEventButton.Name = "createEventButton";
-            this.createEventButton.Size = new System.Drawing.Size(179, 72);
+            this.createEventButton.Size = new System.Drawing.Size(162, 65);
             this.createEventButton.TabIndex = 1;
             this.createEventButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.createEventButton.UseVisualStyleBackColor = false;
