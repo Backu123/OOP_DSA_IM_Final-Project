@@ -71,6 +71,7 @@ namespace QR_Generator_Test_C_
                 {
                     int userID = Convert.ToInt32(reader["ID"]);
                     Profile_Info.Instance.setUserID(userID);
+                    Profile_Info.Instance.setAdminID(userID);
                 }
                 else
                 {
@@ -85,7 +86,6 @@ namespace QR_Generator_Test_C_
             {
                 db.CloseConnection();
             }
-            label3.Text = Profile_Info.Instance.getUserID();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)

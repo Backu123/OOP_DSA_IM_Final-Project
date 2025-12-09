@@ -235,7 +235,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "Create_Admin";
             this.Text = "Create_Admin";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

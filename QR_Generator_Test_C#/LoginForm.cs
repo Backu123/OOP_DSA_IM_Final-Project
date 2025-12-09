@@ -249,7 +249,6 @@ namespace QR_Generator_Test_C_
             Profile_Info.Instance.setSex(accSex());
             Profile_Info.Instance.setRole(accRole());
 
-
             if (string.IsNullOrWhiteSpace(loginUser.Text) || string.IsNullOrWhiteSpace(loginPass.Text))
             {
                 MessageBox.Show("Please input a valid information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -360,7 +359,7 @@ namespace QR_Generator_Test_C_
             radioButton1.Checked = false;
             radioButton2.Checked = false;
         }
-private void CenterPanel()
+        private void CenterPanel()
         {
             mainPanel.Left = (this.ClientSize.Width - mainPanel.Width) / 2;
             mainPanel.Top = (this.ClientSize.Height - mainPanel.Height) / 2;

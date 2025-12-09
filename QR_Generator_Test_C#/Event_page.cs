@@ -188,49 +188,56 @@ namespace QR_Generator_Test_C_
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DB db = new DB();
+            if (string.IsNullOrEmpty(TB_EventID.Text))
+            {
+                MessageBox.Show("Please Input an Event ID.");
+            }
+            else
+            {
+                DB db = new DB();
 
-            string insertQuery = "INSERT INTO user_event(Student_ID, Event_ID) VALUES (@studentID, @eventID)";
-            string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting 
+                string insertQuery = "INSERT INTO user_event(Student_ID, Event_ID) VALUES (@studentID, @eventID)";
+                string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting 
                                 FROM events 
                                 WHERE EventID = @eventID";
 
-            using (MySqlConnection conn = db.GetConnection())
-            {
-                conn.Open();
-                using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
+                using (MySqlConnection conn = db.GetConnection())
                 {
-                    cmd.Parameters.AddWithValue("@studentID", Profile_Info.Instance.userID());
-                    cmd.Parameters.AddWithValue("@eventID", TB_EventID.Text);
-
-                    cmd.ExecuteNonQuery();
-                }
-                using (MySqlCommand cmd2 = new MySqlCommand(selectEventQuery, conn))
-                {
-                    cmd2.Parameters.AddWithValue("@eventID", TB_EventID.Text);
-
-                    using (MySqlDataReader reader = cmd2.ExecuteReader())
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
                     {
-                        if (reader.Read())
-                        {
-                            string eventID = reader["EventID"].ToString();
-                            string eventTitle = reader["EventTitle"].ToString();
-                            string eventDesc = reader["EventDesc"].ToString();
-                            string eventCategory = reader["EventCategory"].ToString();
-                            DateTime eventDuration = (DateTime)reader["EventDate"];
-                            string eventSetting = reader["EventSetting"].ToString();
+                        cmd.Parameters.AddWithValue("@studentID", Profile_Info.Instance.userID());
+                        cmd.Parameters.AddWithValue("@eventID", TB_EventID.Text);
 
-                            // Show only the selected event
-                            AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, eventDuration, eventSetting);
-                        }
-                        else
+                        cmd.ExecuteNonQuery();
+                    }
+                    using (MySqlCommand cmd2 = new MySqlCommand(selectEventQuery, conn))
+                    {
+                        cmd2.Parameters.AddWithValue("@eventID", TB_EventID.Text);
+
+                        using (MySqlDataReader reader = cmd2.ExecuteReader())
                         {
-                            MessageBox.Show("Event ID not found.");
+                            if (reader.Read())
+                            {
+                                string eventID = reader["EventID"].ToString();
+                                string eventTitle = reader["EventTitle"].ToString();
+                                string eventDesc = reader["EventDesc"].ToString();
+                                string eventCategory = reader["EventCategory"].ToString();
+                                DateTime eventDuration = (DateTime)reader["EventDate"];
+                                string eventSetting = reader["EventSetting"].ToString();
+
+                                // Show only the selected event
+                                AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, eventDuration, eventSetting);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Event ID not found.");
+                            }
                         }
                     }
                 }
+                TB_EventID.Text = "";
             }
-            TB_EventID.Text = "";
         }
 
     }

@@ -60,7 +60,7 @@ namespace QR_Generator_Test_C_
                     cmd.Parameters.AddWithValue("@username", TB_Username.Text);
                     if (checkBox1.Checked == true)
                     {
-                        cmd.Parameters.AddWithValue("@section", null);
+                        cmd.Parameters.AddWithValue("@section", "Instructor");
                     }
                     else
                     {

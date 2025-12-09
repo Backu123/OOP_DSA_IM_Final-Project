@@ -38,8 +38,6 @@ namespace QR_Generator_Test_C_
                 cbo.SelectedIndex = 0;
                 StartCamera();
             }
-
-            dataGridView1.Columns.Add("Attendance_ID", "Attendance_ID");
             dataGridView1.Columns.Add("Student_ID", "Student_ID");
             dataGridView1.Columns.Add("Student_Name", "Student_Name");
             dataGridView1.Columns.Add("Event_ID", "Event_ID");
@@ -67,6 +65,32 @@ namespace QR_Generator_Test_C_
             captureDevice.NewFrame += CaptureDevice_NewFrame;
             captureDevice.Start();
             timer1.Start();
+        }
+
+        public bool UserExist(long contactNum)
+        {
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+
+            string query = "SELECT users.ID, users.username, user_event.Event_ID FROM users JOIN user_event ON user_event.Student_ID = users.ID  WHERE users.contactNum = @contactNum AND user_event.Event_ID = @eventID";
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@contactNum", contactNum);
+            cmd.Parameters.AddWithValue("@eventID", this.eventID);
+
+            try
+            {
+                db.OpenConnection();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                return reader.HasRows;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
         }
 
         private void CaptureDevice_NewFrame(object sender, NewFrameEventArgs eventArgs)
@@ -254,10 +278,10 @@ namespace QR_Generator_Test_C_
                 AutoRotate = true,
                 TryInverted = true,
                 Options =
-                {
-                    TryHarder = true,
-                    PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE }
-                }
+        {
+            TryHarder = true,
+            PossibleFormats = new List<BarcodeFormat> { BarcodeFormat.QR_CODE }
+        }
             };
 
             var result = reader.Decode(img);
@@ -265,16 +289,36 @@ namespace QR_Generator_Test_C_
 
             if (result != null)
             {
-                canScan = false;
-                string contactNum = result.Text;
+                try
+                {
+                    canScan = false;
+                    string contactNum = result.Text;
 
-                InsertOrUpdateAttendance(contactNum);
+                    // Check if user is enrolled in the event
+                    bool exists = UserExist(long.Parse(contactNum));
 
-                // 10 sec bfore next scan
-                await Task.Delay(30000);
-                canScan = true;
+                    if (!exists)
+                    {
+                        Result.ForeColor = Color.Red;
+                        Result.Text = "User is NOT registered in this event.";
+                        await Task.Delay(3000);
+                        Result.Text = "";
+                        canScan = true;
+                        return;  // stop here → do NOT insert attendance
+                    }
+
+                    // User is valid → proceed with attendance
+                    InsertOrUpdateAttendance(contactNum);
+
+                    await Task.Delay(5000);
+                    Result.Text = "";
+                    canScan = true;
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
+                
             }
         }
+
 
         private void Scanner_Form_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -293,12 +337,18 @@ namespace QR_Generator_Test_C_
             catch { }
         }
 
+        private string FormatStudentID(string rawID)
+        {
+            int id = int.Parse(rawID);
+            return $"0325-{id:0000}";
+        }
+
         private void Refresh_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
             DB db = new DB();
             MySqlConnection conn = db.GetConnection();
-            string query = @"SELECT * FROM attendance where Event_ID = @eventID";
+            string query = @"SELECT * FROM attendance WHERE Event_ID = @eventID";
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@eventID", eventID);
 
@@ -309,9 +359,10 @@ namespace QR_Generator_Test_C_
 
                 while (reader.Read())
                 {
+                    string formattedID = FormatStudentID(reader["Student_ID"].ToString());
+
                     dataGridView1.Rows.Add(
-                        reader["AttendanceID"].ToString(),
-                        reader["Student_ID"].ToString(),
+                        formattedID,
                         reader["Student_Name"].ToString(),
                         reader["Event_ID"].ToString(),
                         reader["TimeIn"].ToString(),
@@ -329,5 +380,7 @@ namespace QR_Generator_Test_C_
                 db.CloseConnection();
             }
         }
+
+
     }
 }
