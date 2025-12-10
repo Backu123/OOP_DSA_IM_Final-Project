@@ -36,9 +36,9 @@
             // 
             // flowEventsPanel
             // 
-            this.flowEventsPanel.Location = new System.Drawing.Point(21, 60);
+            this.flowEventsPanel.Location = new System.Drawing.Point(41, 80);
             this.flowEventsPanel.Name = "flowEventsPanel";
-            this.flowEventsPanel.Size = new System.Drawing.Size(1149, 517);
+            this.flowEventsPanel.Size = new System.Drawing.Size(1192, 601);
             this.flowEventsPanel.TabIndex = 0;
             this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -74,12 +74,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1182, 589);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.TB_EventID);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.flowEventsPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Event_page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Event_page";
             this.Load += new System.EventHandler(this.Event_page_Load);
             this.ResumeLayout(false);

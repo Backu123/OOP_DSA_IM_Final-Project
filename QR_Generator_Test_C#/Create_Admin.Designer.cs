@@ -234,6 +234,7 @@
             this.ClientSize = new System.Drawing.Size(814, 510);
             this.Controls.Add(this.panel1);
             this.Name = "Create_Admin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Create_Admin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

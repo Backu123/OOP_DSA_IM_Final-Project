@@ -42,7 +42,7 @@ namespace QR_Generator_Test_C_
             string role = Profile_Info.Instance.getRole().ToLower();
             panel1.Visible = true;
             panel2.Visible = true;
-            if (role == "admin")
+            /*if (role == "admin")
             {
                 panel1.Visible = false;
                 panel2.Visible = true;
@@ -74,7 +74,7 @@ namespace QR_Generator_Test_C_
                 admin_Contact.Visible = true;
             }
             else
-            {
+            {*/
                 string studentID = Profile_Info.Instance.getUserID();
                 string username = Profile_Info.Instance.getUsername();
                 string section = Profile_Info.Instance.getSection();
@@ -95,7 +95,7 @@ namespace QR_Generator_Test_C_
 
                 panel1.Visible = true;
                 panel2.Visible = false;
-            }
+            /*}*/
 
         }
 
@@ -120,6 +120,11 @@ namespace QR_Generator_Test_C_
         }
 
         private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

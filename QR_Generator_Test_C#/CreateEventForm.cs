@@ -36,6 +36,7 @@ namespace QR_Generator_Test_C_
         {
             DateTime selected = dateTimePicker1.Value;
             DateTime now = DateTime.Now;
+            // renamed TB_Title
             if (string.IsNullOrEmpty(TB_ID.Text) || string.IsNullOrEmpty(TB_Title.Text) || string.IsNullOrEmpty(TB_Desc.Text) || string.IsNullOrEmpty(CB_Category.Text) || string.IsNullOrEmpty(CB_Settings.Text))
             {
                 MessageBox.Show("Please Finish the Form", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -101,6 +102,16 @@ namespace QR_Generator_Test_C_
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
           
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

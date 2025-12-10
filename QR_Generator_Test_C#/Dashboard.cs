@@ -29,33 +29,27 @@ namespace QR_Generator_Test_C_
             return username;
         }
 
-        private void CenterPanel()
+        /*private void CenterPanel()
         {
             userPanel.Left = (this.ClientSize.Width - userPanel.Width) / 2;
             userPanel.Top = (this.ClientSize.Height - userPanel.Height) / 2;
             adminPanel.Left = (this.ClientSize.Width - adminPanel.Width) / 2;
             adminPanel.Top = (this.ClientSize.Height - adminPanel.Height) / 2;
-        }
+        }*/
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            CenterPanel();
             if (Profile_Info.Instance.getRole() == "Admin")
             {
                 createEventToolStripMenuItem.Visible = true;
                 createAdminMenuItem.Visible = true;
-                adminPanel.Visible = true;
-                userPanel.Visible = false;
             }
             else
             {
                 createEventToolStripMenuItem.Visible = false;
                 createAdminMenuItem.Visible = false;
-                userPanel.Visible = true;
-                adminPanel.Visible = false;
             }
-            this.WindowState = FormWindowState.Maximized;
-            
+
             DB db = new DB();
             MySqlConnection conn = db.GetConnection();
             string query = "Select ID from users where username = @username";
@@ -73,10 +67,6 @@ namespace QR_Generator_Test_C_
                     Profile_Info.Instance.setUserID(userID);
                     Profile_Info.Instance.setAdminID(userID);
                 }
-                else
-                {
-                    MessageBox.Show("User not found.");
-                }
             }
             catch (Exception ex)
             {
@@ -87,6 +77,7 @@ namespace QR_Generator_Test_C_
                 db.CloseConnection();
             }
         }
+
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {

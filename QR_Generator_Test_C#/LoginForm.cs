@@ -210,7 +210,18 @@ namespace QR_Generator_Test_C_
 
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void loginUser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         public bool UserExist()
         {
@@ -284,6 +295,11 @@ namespace QR_Generator_Test_C_
         {
 
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+        
 
         public String getUsername()
         {
@@ -293,7 +309,7 @@ namespace QR_Generator_Test_C_
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TB_Username.Text) ||
-                string.IsNullOrWhiteSpace(comboBox1.Text) ||
+                string.IsNullOrWhiteSpace(TB_Section.Text) ||
                 string.IsNullOrWhiteSpace(TB_Password.Text) ||
                 string.IsNullOrWhiteSpace(TB_Contact.Text) ||
                 (radioButton1.Checked == false && radioButton2.Checked == false))
@@ -331,7 +347,7 @@ namespace QR_Generator_Test_C_
             MySqlCommand cmd = new MySqlCommand(query, conn);
 
             cmd.Parameters.AddWithValue("@username", TB_Username.Text);
-            cmd.Parameters.AddWithValue("@section", comboBox1.Text);
+            cmd.Parameters.AddWithValue("@section", TB_Section.Text);
             cmd.Parameters.AddWithValue("@contactNum", TB_Contact.Text);
             cmd.Parameters.AddWithValue("@password", TB_Password.Text);
             cmd.Parameters.AddWithValue("@sex", rbValue);
@@ -353,23 +369,17 @@ namespace QR_Generator_Test_C_
             }
 
             TB_Username.Clear();
-            comboBox1.Text = "";
+            TB_Section.Text = "";
             TB_Password.Clear();
             TB_Contact.Clear();
             radioButton1.Checked = false;
             radioButton2.Checked = false;
         }
-        private void CenterPanel()
-        {
-            mainPanel.Left = (this.ClientSize.Width - mainPanel.Width) / 2;
-            mainPanel.Top = (this.ClientSize.Height - mainPanel.Height) / 2;
-        }
+        
         
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            CenterPanel();
             TB_Password.PasswordChar = '*';
             loginPass.PasswordChar = '*';
         }
@@ -384,42 +394,7 @@ namespace QR_Generator_Test_C_
                 TB_Contact.Text = "09";
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            TB_Password.Text = "kjwdnkedhnikd";
-        }
-
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TB_Section_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
+        private void TB_Username_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -429,28 +404,24 @@ namespace QR_Generator_Test_C_
 
         }
 
-        private void TB_Username_TextChanged(object sender, EventArgs e)
+        private void TB_Section_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void TB_Password_TextChanged(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void TB_Username_Click(object sender, EventArgs e)
-        {
         }
     }
 }

@@ -144,7 +144,6 @@ namespace QR_Generator_Test_C_
         }
         private void Event_page_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;
             DB db = new DB();
