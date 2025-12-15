@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\eventpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\eventpanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -37,10 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\scanner_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\scanner_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -159,16 +159,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Program.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Program.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Program.cs",
               "RelativeToolTip": "QR_Generator_Test_C#\\Program.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAIwBIAAAAMAAAA",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAvwA8AAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T17:29:07.875Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -184,7 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Event_page.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Event_page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Event_page.cs",
@@ -196,7 +197,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EventPanel.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\EventPanel.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\EventPanel.cs",
@@ -226,14 +227,14 @@
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\LoginForm.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\LoginForm.cs*",
               "RelativeToolTip": "QR_Generator_Test_C#\\LoginForm.cs*",
-              "ViewState": "AQIAAAwCAAAAAAAAAIA/wBgCAAAAAAAA",
+              "ViewState": "AQIAAAwCAAAAAAAAAIA/wBgCAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-19T02:19:00.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Event_page.Designer.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Event_page.Designer.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Event_page.Designer.cs",
@@ -246,7 +247,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Event_page.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Event_page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Event_page.cs",
@@ -259,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EventPanel.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\EventPanel.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\EventPanel.cs",
@@ -272,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Scanner_Form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Scanner_Form.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Scanner_Form.cs",
@@ -283,7 +284,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Scanner_Form.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Scanner_Form.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Scanner_Form.cs",

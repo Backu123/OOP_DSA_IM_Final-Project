@@ -114,7 +114,6 @@
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
-            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
             // label1
             // 
@@ -443,10 +442,8 @@
             this.TB_Section.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_Section.Size = new System.Drawing.Size(311, 25);
             this.TB_Section.TabIndex = 9;
-            this.TB_Section.TextChanged += new System.EventHandler(this.TB_Section_TextChanged);
             this.TB_Section.Enter += new System.EventHandler(this.TB_Section_Enter);
             this.TB_Section.Leave += new System.EventHandler(this.TB_Section_Leave);
-            this.TB_Section.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Section_MouseDown);
             // 
             // LoginForm
             // 
