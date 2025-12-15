@@ -406,7 +406,7 @@ namespace QR_Generator_Test_C_
 
         private void TB_Section_TextChanged(object sender, EventArgs e)
         {
-
+            label6.ForeColor = Color.Orange;
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -487,5 +487,54 @@ namespace QR_Generator_Test_C_
             label7.ForeColor = Color.Gray;
         }
 
+        private void textBox1_Leave(object sender, EventArgs e)
+        {
+            label11.ForeColor = Color.Gray;
+        }
+
+        private void loginPass_Enter(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.Orange;
+        }
+
+        private void loginUser_Enter(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Orange;
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            label11.ForeColor = Color.Orange;
+        }
+
+        private void TB_Username_Enter(object sender, EventArgs e)
+        {
+            label5.ForeColor = Color.Orange;
+        }
+
+        private void TB_Contact_Enter(object sender, EventArgs e)
+        {
+            label7.ForeColor = Color.Orange;
+        }
+
+        private void TB_Password_Enter(object sender, EventArgs e)
+        {
+            label8.ForeColor = Color.Orange;
+        }
+
+        private void TB_Section_Enter(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.Orange;
+        }
+
+        private void TB_Password_Leave(object sender, EventArgs e)
+        {
+            label8.ForeColor = Color.Gray;
+        }
+
+        private void TB_Section_Leave(object sender, EventArgs e)
+        {
+            label6.ForeColor = Color.Gray;
+        }
     }
 }
