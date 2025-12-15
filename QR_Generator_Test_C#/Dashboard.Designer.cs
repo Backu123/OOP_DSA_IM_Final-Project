@@ -40,15 +40,16 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem,
             this.createEventToolStripMenuItem,
             this.eventsToolStripMenuItem,
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
+            this.dashboardToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(374, 32);
+            this.menuStrip1.Location = new System.Drawing.Point(420, 28);
             this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(460, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
@@ -127,16 +128,22 @@
             // 
             // userPanel
             // 
-            this.userPanel.Location = new System.Drawing.Point(150, 200);
+            this.userPanel.BackColor = System.Drawing.Color.Transparent;
+            this.userPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userPanel.BackgroundImage")));
+            this.userPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.userPanel.Location = new System.Drawing.Point(55, 232);
             this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(200, 100);
+            this.userPanel.Size = new System.Drawing.Size(569, 327);
             this.userPanel.TabIndex = 1;
             // 
             // adminPanel
             // 
-            this.adminPanel.Location = new System.Drawing.Point(422, 200);
+            this.adminPanel.BackColor = System.Drawing.Color.Transparent;
+            this.adminPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminPanel.BackgroundImage")));
+            this.adminPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adminPanel.Location = new System.Drawing.Point(671, 232);
             this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(200, 100);
+            this.adminPanel.Size = new System.Drawing.Size(557, 327);
             this.adminPanel.TabIndex = 2;
             this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint_1);
             // 

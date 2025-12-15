@@ -487,5 +487,24 @@ namespace QR_Generator_Test_C_
             label7.ForeColor = Color.Gray;
         }
 
+        private void TB_Password_TextChanged(object sender, EventArgs e)
+        {
+            TB_Password.ForeColor = Color.Orange;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Password_MouseDown(object sender, MouseEventArgs e)
+        {
+            label8.ForeColor = Color.Orange;
+        }
+
+        private void TB_Password_MouseLeave(object sender, EventArgs e)
+        {
+            label8.ForeColor = Color.Gray;
+        }
     }
 }
