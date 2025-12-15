@@ -220,7 +220,7 @@ namespace QR_Generator_Test_C_
         }
         private void loginUser_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         public bool UserExist()
@@ -423,5 +423,69 @@ namespace QR_Generator_Test_C_
         {
 
         }
+
+        private void loginUser_MouseDown(object sender, MouseEventArgs e)
+        {
+            label1.ForeColor = Color.Orange;
+        }
+
+        private void loginUser_Leave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.DarkGray;
+        }
+
+        private void loginPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            label2.ForeColor = Color.Orange;
+        }
+
+        private void loginPass_Leave(object sender, EventArgs e)
+        {
+            label2.ForeColor = Color.DarkGray;
+        }
+
+        private void loginPass_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            label11.ForeColor = Color.Orange;
+        }
+
+        private void textBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            label11.ForeColor = Color.Orange;
+        }
+
+        private void textBox1_MouseLeave(object sender, EventArgs e)
+        {
+            label11.ForeColor = Color.Gray;
+        }
+
+        private void TB_Username_MouseDown(object sender, MouseEventArgs e)
+        {
+            label5.ForeColor = Color.Orange;
+        }
+        private void TB_Username_Leave(object sender, EventArgs e)
+        {
+            label5.ForeColor = Color.Gray;
+        }
+        private void TB_Section_MouseDown(object sender, MouseEventArgs e)
+        {
+            label6.ForeColor = Color.Gray;
+        }
+
+        private void TB_Contact_MouseDown(object sender, MouseEventArgs e)
+        {
+            label7.ForeColor = Color.Orange;
+        }
+
+        private void TB_Contact_Leave(object sender, EventArgs e)
+        {
+            label7.ForeColor = Color.Gray;
+        }
+
     }
 }

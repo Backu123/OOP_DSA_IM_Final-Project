@@ -42,7 +42,6 @@
             this.TB_Password = new System.Windows.Forms.TextBox();
             this.TB_Contact = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.TB_Section = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -60,6 +59,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TB_Section = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -110,6 +110,9 @@
             this.textBox1.Size = new System.Drawing.Size(172, 25);
             this.textBox1.TabIndex = 22;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
+            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
             // label1
             // 
@@ -147,6 +150,8 @@
             this.loginUser.TabIndex = 0;
             this.loginUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.loginUser.TextChanged += new System.EventHandler(this.loginUser_TextChanged);
+            this.loginUser.Leave += new System.EventHandler(this.loginUser_Leave);
+            this.loginUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginUser_MouseDown);
             // 
             // button3
             // 
@@ -174,6 +179,9 @@
             this.loginPass.Size = new System.Drawing.Size(265, 25);
             this.loginPass.TabIndex = 3;
             this.loginPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.loginPass.TextChanged += new System.EventHandler(this.loginPass_TextChanged);
+            this.loginPass.Leave += new System.EventHandler(this.loginPass_Leave);
+            this.loginPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginPass_MouseDown);
             // 
             // button1
             // 
@@ -219,6 +227,8 @@
             this.TB_Contact.TabIndex = 11;
             this.TB_Contact.Click += new System.EventHandler(this.TB_Contact_Click);
             this.TB_Contact.TextChanged += new System.EventHandler(this.TB_Contact_TextChanged);
+            this.TB_Contact.Leave += new System.EventHandler(this.TB_Contact_Leave);
+            this.TB_Contact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Contact_MouseDown);
             // 
             // label5
             // 
@@ -232,20 +242,6 @@
             this.label5.Text = "Username";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // TB_Section
-            // 
-            this.TB_Section.BackColor = System.Drawing.Color.Black;
-            this.TB_Section.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TB_Section.ForeColor = System.Drawing.Color.White;
-            this.TB_Section.Location = new System.Drawing.Point(144, 293);
-            this.TB_Section.Multiline = true;
-            this.TB_Section.Name = "TB_Section";
-            this.TB_Section.Size = new System.Drawing.Size(311, 25);
-            this.TB_Section.TabIndex = 9;
-            this.TB_Section.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TB_Section.TextChanged += new System.EventHandler(this.TB_Section_TextChanged);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -253,9 +249,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label6.Location = new System.Drawing.Point(144, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 20);
+            this.label6.Size = new System.Drawing.Size(181, 20);
             this.label6.TabIndex = 10;
-            this.label6.Text = "Section";
+            this.label6.Text = "Section (ex. BSCS-2B)";
             // 
             // radioButton2
             // 
@@ -360,6 +356,8 @@
             this.TB_Username.TabIndex = 7;
             this.TB_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TB_Username.TextChanged += new System.EventHandler(this.TB_Username_TextChanged);
+            this.TB_Username.Leave += new System.EventHandler(this.TB_Username_Leave);
+            this.TB_Username.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Username_MouseDown);
             // 
             // pictureBox2
             // 
@@ -425,6 +423,21 @@
             this.panel2.Size = new System.Drawing.Size(265, 1);
             this.panel2.TabIndex = 32;
             // 
+            // TB_Section
+            // 
+            this.TB_Section.BackColor = System.Drawing.Color.Black;
+            this.TB_Section.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TB_Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TB_Section.ForeColor = System.Drawing.Color.White;
+            this.TB_Section.Location = new System.Drawing.Point(144, 293);
+            this.TB_Section.Multiline = true;
+            this.TB_Section.Name = "TB_Section";
+            this.TB_Section.Size = new System.Drawing.Size(311, 25);
+            this.TB_Section.TabIndex = 9;
+            this.TB_Section.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.TB_Section.TextChanged += new System.EventHandler(this.TB_Section_TextChanged);
+            this.TB_Section.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Section_MouseDown);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -469,7 +482,7 @@
             this.Name = "LoginForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
             this.Load += new System.EventHandler(this.LoginForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -493,7 +506,6 @@
         private System.Windows.Forms.TextBox TB_Password;
         private System.Windows.Forms.TextBox TB_Contact;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox TB_Section;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -511,5 +523,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox TB_Section;
     }
 }

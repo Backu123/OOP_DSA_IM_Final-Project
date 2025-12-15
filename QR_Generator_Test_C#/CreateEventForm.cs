@@ -29,6 +29,8 @@ namespace QR_Generator_Test_C_
 
         private void button2_Click(object sender, EventArgs e)
         {
+            Admin_Event admin = new Admin_Event();
+            admin.Show();
             this.Hide();
         }
 
@@ -110,6 +112,11 @@ namespace QR_Generator_Test_C_
         }
 
         private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TB_Title_TextChanged(object sender, EventArgs e)
         {
 
         }

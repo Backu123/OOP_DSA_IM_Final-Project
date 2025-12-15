@@ -43,9 +43,9 @@
             this.flowEventsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowEventsPanel.BackColor = System.Drawing.Color.Transparent;
             this.flowEventsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowEventsPanel.Location = new System.Drawing.Point(95, 112);
+            this.flowEventsPanel.Location = new System.Drawing.Point(95, 116);
             this.flowEventsPanel.Name = "flowEventsPanel";
-            this.flowEventsPanel.Size = new System.Drawing.Size(1006, 489);
+            this.flowEventsPanel.Size = new System.Drawing.Size(1006, 488);
             this.flowEventsPanel.TabIndex = 0;
             this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -94,6 +94,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.createEventButton);
@@ -101,7 +102,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Admin_Event";
             this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin_Event";
             this.Load += new System.EventHandler(this.Admin_Event_Load);
             this.ResumeLayout(false);

@@ -44,7 +44,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 12);
+            this.button1.Location = new System.Drawing.Point(41, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 42);
             this.button1.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.Controls.Add(this.flowEventsPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Event_page";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Event_page";
             this.Load += new System.EventHandler(this.Event_page_Load);
             this.ResumeLayout(false);

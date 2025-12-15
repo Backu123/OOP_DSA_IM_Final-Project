@@ -39,10 +39,12 @@ namespace QR_Generator_Test_C_
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
+            qRGeneratingToolStripMenuItem.Visible = false;
             if (Profile_Info.Instance.getRole() == "Admin")
             {
                 createEventToolStripMenuItem.Visible = true;
                 createAdminMenuItem.Visible = true;
+                eventsToolStripMenuItem.Visible = false;
             }
             else
             {
@@ -162,6 +164,11 @@ namespace QR_Generator_Test_C_
         }
 
         private void adminPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void adminPanel_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

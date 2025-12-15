@@ -71,7 +71,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "User_Event";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User_Event";
             this.Load += new System.EventHandler(this.User_Event_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

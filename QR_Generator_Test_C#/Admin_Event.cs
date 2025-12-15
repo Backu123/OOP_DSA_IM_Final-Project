@@ -94,6 +94,7 @@ namespace QR_Generator_Test_C_ {
         {
             CreateEventForm createEventForm = new CreateEventForm(this);
             createEventForm.Show();
+            this.Hide();
         }
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -108,7 +109,6 @@ namespace QR_Generator_Test_C_ {
         }
         private void Admin_Event_Load(object sender, EventArgs e)
         {
-            
             CenterPanel();
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;

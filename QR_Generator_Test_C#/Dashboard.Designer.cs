@@ -27,6 +27,8 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.userPanel = new System.Windows.Forms.Panel();
+            this.adminPanel = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -123,17 +125,34 @@
             this.createAdminMenuItem.Name = "createAdminMenuItem";
             this.createAdminMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
+            // userPanel
+            // 
+            this.userPanel.Location = new System.Drawing.Point(150, 200);
+            this.userPanel.Name = "userPanel";
+            this.userPanel.Size = new System.Drawing.Size(200, 100);
+            this.userPanel.TabIndex = 1;
+            // 
+            // adminPanel
+            // 
+            this.adminPanel.Location = new System.Drawing.Point(422, 200);
+            this.adminPanel.Name = "adminPanel";
+            this.adminPanel.Size = new System.Drawing.Size(200, 100);
+            this.adminPanel.TabIndex = 2;
+            this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint_1);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.adminPanel);
+            this.Controls.Add(this.userPanel);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -154,5 +173,7 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createAdminMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Panel userPanel;
+        private System.Windows.Forms.Panel adminPanel;
     }
 }

@@ -9,6 +9,7 @@ using AForge.Video.DirectShow;
 using ZXing;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
+using System.ComponentModel;
 
 namespace QR_Generator_Test_C_
 {
@@ -27,8 +28,10 @@ namespace QR_Generator_Test_C_
 
         private void Scanner_Form_Load(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
+            // ───── ComboBox setup (DO NOT set SelectedIndex yet)
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
+            // ───── Camera setup
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo filterInfo in filterInfoCollection)
                 cbo.Items.Add(filterInfo.Name);
@@ -38,13 +41,68 @@ namespace QR_Generator_Test_C_
                 cbo.SelectedIndex = 0;
                 StartCamera();
             }
-            dataGridView1.Columns.Add("Student_ID", "Student_ID");
-            dataGridView1.Columns.Add("Student_Name", "Student_Name");
-            dataGridView1.Columns.Add("Event_ID", "Event_ID");
-            dataGridView1.Columns.Add("TimeIn", "TimeIn");
-            dataGridView1.Columns.Add("TimeOut", "TimeOut");
-            dataGridView1.Columns.Add("ScanDate", "ScanDate");
+
+            // ───── DataGridView setup
+            dataGridView1.Columns.Clear();
+            dataGridView1.AutoGenerateColumns = false;
+
+            dataGridView1.Columns.Add("Student_ID", "Student ID");
+            dataGridView1.Columns.Add("Student_Name", "Student Name");
+            dataGridView1.Columns.Add("Event_ID", "Event ID");
+            dataGridView1.Columns.Add("TimeIn", "Time In");
+            dataGridView1.Columns.Add("TimeOut", "Time Out");
+            dataGridView1.Columns.Add("ScanDate", "Scan Date");
+
+            // Column types (IMPORTANT for sorting)
+            dataGridView1.Columns["TimeIn"].ValueType = typeof(DateTime);
+            dataGridView1.Columns["TimeOut"].ValueType = typeof(DateTime);
+            dataGridView1.Columns["ScanDate"].ValueType = typeof(DateTime);
+
+            dataGridView1.Columns["TimeIn"].SortMode = DataGridViewColumnSortMode.Programmatic;
+            dataGridView1.Columns["Student_Name"].SortMode = DataGridViewColumnSortMode.Programmatic;
+            dataGridView1.Columns["Student_ID"].SortMode = DataGridViewColumnSortMode.Programmatic;
+
+            // ───── Load data from MySQL
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+
+            string query = @"SELECT Student_ID, Student_Name, Event_ID, TimeIn, TimeOut, ScanDate
+                     FROM attendance
+                     WHERE Event_ID = @eventID";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@eventID", eventID);
+
+            try
+            {
+                db.OpenConnection();
+                MySqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    dataGridView1.Rows.Add(
+                        FormatStudentID(reader["Student_ID"].ToString()),
+                        reader["Student_Name"].ToString(),
+                        reader["Event_ID"].ToString(),
+                        reader["TimeIn"] == DBNull.Value ? (object)null : Convert.ToDateTime(reader["TimeIn"]),
+                        reader["TimeOut"] == DBNull.Value ? (object)null : Convert.ToDateTime(reader["TimeOut"]),
+                        Convert.ToDateTime(reader["ScanDate"])
+                    );
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Load Error: " + ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+
+            // ───── DEFAULT SORT (runs AFTER data is loaded)
+            comboBox1.SelectedIndex = 0;   // First to Last (TimeIn ASC)
         }
+
 
         private void StartCamera()
         {
@@ -381,6 +439,80 @@ namespace QR_Generator_Test_C_
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
+
+        private void Result_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DataGridViewColumn columnToSort;
+
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0:
+                    columnToSort = dataGridView1.Columns["TimeIn"];
+                    break;
+                case 1:
+                    columnToSort = dataGridView1.Columns["Student_Name"];
+                    break;
+                case 2:
+                    columnToSort = dataGridView1.Columns["Student_ID"];
+                    break;
+                default:
+                    return;
+            }
+
+            // Determine new sort direction
+            System.ComponentModel.ListSortDirection newDirection;
+
+            if (dataGridView1.SortedColumn == columnToSort)
+            {
+                // Toggle direction if the same column is already sorted
+                if (dataGridView1.SortOrder == SortOrder.Ascending)
+                    newDirection = System.ComponentModel.ListSortDirection.Descending;
+                else
+                    newDirection = System.ComponentModel.ListSortDirection.Ascending;
+            }
+            else
+            {
+                // Default to ascending if a different column is selected
+                newDirection = System.ComponentModel.ListSortDirection.Ascending;
+            }
+
+            // Apply the sort
+            dataGridView1.Sort(columnToSort, newDirection);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count == 0) return;
+
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0: // First to Last (TimeIn)
+                    dataGridView1.Sort(dataGridView1.Columns["TimeIn"], ListSortDirection.Ascending);
+                    break;
+
+                case 1: // Alphabetical
+                    dataGridView1.Sort(dataGridView1.Columns["Student_Name"], ListSortDirection.Ascending);
+                    break;
+
+                case 2: // Numerical (Student ID)
+                    dataGridView1.Sort(dataGridView1.Columns["Student_ID"], ListSortDirection.Ascending);
+                    break;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EventPanel eventPanel = new EventPanel();
+            eventPanel.Show();
+        }
     }
 }
