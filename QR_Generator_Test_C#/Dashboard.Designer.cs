@@ -19,17 +19,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qRGeneratingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userPanel = new System.Windows.Forms.Panel();
             this.adminPanel = new System.Windows.Forms.Panel();
             this.createAdminStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.createAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,15 +48,25 @@
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(420, 28);
+            this.exitToolStripMenuItem,
+            this.createAdminToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(401, 36);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(460, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(574, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dashboardToolStripMenuItem.BackgroundImage")));
+            this.dashboardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(67, 27);
+            this.dashboardToolStripMenuItem.Text = "           ";
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // createEventToolStripMenuItem
             // 
@@ -104,15 +115,6 @@
             this.logoutToolStripMenuItem.Text = "          ";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dashboardToolStripMenuItem.BackgroundImage")));
-            this.dashboardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(67, 27);
-            this.dashboardToolStripMenuItem.Text = "           ";
-            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
-            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.BackgroundImage")));
@@ -155,6 +157,13 @@
             this.createAdminStrip.Text = "toolStripMenuItem1";
             this.createAdminStrip.Click += new System.EventHandler(this.createAdminStrip_Click);
             // 
+            // createAdminToolStripMenuItem
+            // 
+            this.createAdminToolStripMenuItem.Name = "createAdminToolStripMenuItem";
+            this.createAdminToolStripMenuItem.Size = new System.Drawing.Size(114, 27);
+            this.createAdminToolStripMenuItem.Text = "Create Admin";
+            this.createAdminToolStripMenuItem.Click += new System.EventHandler(this.createAdminToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,5 +201,6 @@
         private System.Windows.Forms.Panel userPanel;
         private System.Windows.Forms.Panel adminPanel;
         private System.Windows.Forms.ToolStripMenuItem createAdminStrip;
+        private System.Windows.Forms.ToolStripMenuItem createAdminToolStripMenuItem;
     }
 }
