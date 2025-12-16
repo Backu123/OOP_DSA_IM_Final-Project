@@ -107,12 +107,13 @@
             this.textBox1.Location = new System.Drawing.Point(806, 402);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.textBox1.Size = new System.Drawing.Size(172, 25);
             this.textBox1.TabIndex = 22;
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
-            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
             // 
             // label1
             // 
@@ -146,10 +147,11 @@
             this.loginUser.Location = new System.Drawing.Point(806, 270);
             this.loginUser.Multiline = true;
             this.loginUser.Name = "loginUser";
+            this.loginUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loginUser.Size = new System.Drawing.Size(265, 25);
             this.loginUser.TabIndex = 0;
-            this.loginUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.loginUser.TextChanged += new System.EventHandler(this.loginUser_TextChanged);
+            this.loginUser.Enter += new System.EventHandler(this.loginUser_Enter);
             this.loginUser.Leave += new System.EventHandler(this.loginUser_Leave);
             this.loginUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginUser_MouseDown);
             // 
@@ -175,10 +177,15 @@
             this.loginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.loginPass.Location = new System.Drawing.Point(806, 337);
             this.loginPass.Name = "loginPass";
+<<<<<<< HEAD
             this.loginPass.Size = new System.Drawing.Size(265, 23);
+=======
+            this.loginPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loginPass.Size = new System.Drawing.Size(265, 25);
+>>>>>>> 11fe42e1ace9f4266a7c26c10fb25fb89a18d23a
             this.loginPass.TabIndex = 3;
-            this.loginPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.loginPass.TextChanged += new System.EventHandler(this.loginPass_TextChanged);
+            this.loginPass.Enter += new System.EventHandler(this.loginPass_Enter);
             this.loginPass.Leave += new System.EventHandler(this.loginPass_Leave);
             this.loginPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginPass_MouseDown);
             // 
@@ -208,11 +215,17 @@
             this.TB_Password.Location = new System.Drawing.Point(144, 439);
             this.TB_Password.Multiline = true;
             this.TB_Password.Name = "TB_Password";
+            this.TB_Password.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_Password.Size = new System.Drawing.Size(309, 25);
             this.TB_Password.TabIndex = 13;
+<<<<<<< HEAD
             this.TB_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TB_Password.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Password_MouseDown);
             this.TB_Password.MouseLeave += new System.EventHandler(this.TB_Password_MouseLeave);
+=======
+            this.TB_Password.Enter += new System.EventHandler(this.TB_Password_Enter);
+            this.TB_Password.Leave += new System.EventHandler(this.TB_Password_Leave);
+>>>>>>> 11fe42e1ace9f4266a7c26c10fb25fb89a18d23a
             // 
             // TB_Contact
             // 
@@ -228,6 +241,7 @@
             this.TB_Contact.TabIndex = 11;
             this.TB_Contact.Click += new System.EventHandler(this.TB_Contact_Click);
             this.TB_Contact.TextChanged += new System.EventHandler(this.TB_Contact_TextChanged);
+            this.TB_Contact.Enter += new System.EventHandler(this.TB_Contact_Enter);
             this.TB_Contact.Leave += new System.EventHandler(this.TB_Contact_Leave);
             this.TB_Contact.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Contact_MouseDown);
             // 
@@ -354,10 +368,11 @@
             this.TB_Username.Location = new System.Drawing.Point(144, 226);
             this.TB_Username.Multiline = true;
             this.TB_Username.Name = "TB_Username";
+            this.TB_Username.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_Username.Size = new System.Drawing.Size(311, 25);
             this.TB_Username.TabIndex = 7;
-            this.TB_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.TB_Username.TextChanged += new System.EventHandler(this.TB_Username_TextChanged);
+            this.TB_Username.Enter += new System.EventHandler(this.TB_Username_Enter);
             this.TB_Username.Leave += new System.EventHandler(this.TB_Username_Leave);
             this.TB_Username.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Username_MouseDown);
             // 
@@ -434,11 +449,11 @@
             this.TB_Section.Location = new System.Drawing.Point(144, 293);
             this.TB_Section.Multiline = true;
             this.TB_Section.Name = "TB_Section";
+            this.TB_Section.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_Section.Size = new System.Drawing.Size(311, 25);
             this.TB_Section.TabIndex = 9;
-            this.TB_Section.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TB_Section.TextChanged += new System.EventHandler(this.TB_Section_TextChanged);
-            this.TB_Section.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Section_MouseDown);
+            this.TB_Section.Enter += new System.EventHandler(this.TB_Section_Enter);
+            this.TB_Section.Leave += new System.EventHandler(this.TB_Section_Leave);
             // 
             // LoginForm
             // 
