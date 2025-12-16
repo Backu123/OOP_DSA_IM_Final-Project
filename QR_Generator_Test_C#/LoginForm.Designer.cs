@@ -177,12 +177,9 @@
             this.loginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.loginPass.Location = new System.Drawing.Point(806, 337);
             this.loginPass.Name = "loginPass";
-<<<<<<< HEAD
             this.loginPass.Size = new System.Drawing.Size(265, 23);
-=======
             this.loginPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.loginPass.Size = new System.Drawing.Size(265, 25);
->>>>>>> 11fe42e1ace9f4266a7c26c10fb25fb89a18d23a
             this.loginPass.TabIndex = 3;
             this.loginPass.TextChanged += new System.EventHandler(this.loginPass_TextChanged);
             this.loginPass.Enter += new System.EventHandler(this.loginPass_Enter);
@@ -218,14 +215,9 @@
             this.TB_Password.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_Password.Size = new System.Drawing.Size(309, 25);
             this.TB_Password.TabIndex = 13;
-<<<<<<< HEAD
             this.TB_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TB_Password.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TB_Password_MouseDown);
-            this.TB_Password.MouseLeave += new System.EventHandler(this.TB_Password_MouseLeave);
-=======
             this.TB_Password.Enter += new System.EventHandler(this.TB_Password_Enter);
             this.TB_Password.Leave += new System.EventHandler(this.TB_Password_Leave);
->>>>>>> 11fe42e1ace9f4266a7c26c10fb25fb89a18d23a
             // 
             // TB_Contact
             // 
@@ -305,7 +297,6 @@
             this.label7.Size = new System.Drawing.Size(67, 20);
             this.label7.TabIndex = 12;
             this.label7.Text = "Contact";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label4
             // 
