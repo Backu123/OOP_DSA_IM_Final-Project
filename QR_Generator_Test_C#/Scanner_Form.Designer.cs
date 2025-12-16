@@ -121,7 +121,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(579, 49);
+            this.button3.Location = new System.Drawing.Point(579, 41);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(167, 45);
             this.button3.TabIndex = 10;
@@ -156,7 +156,7 @@
             this.Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Refresh.FlatAppearance.BorderSize = 0;
             this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Refresh.Location = new System.Drawing.Point(579, 92);
+            this.Refresh.Location = new System.Drawing.Point(579, 87);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(102, 41);
             this.Refresh.TabIndex = 7;
