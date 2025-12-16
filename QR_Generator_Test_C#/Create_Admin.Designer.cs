@@ -73,7 +73,7 @@
             // comboBox1
             // 
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "BSCS1A",
@@ -98,13 +98,13 @@
             "4GAV2"});
             this.comboBox1.Location = new System.Drawing.Point(170, 181);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(378, 30);
+            this.comboBox1.Size = new System.Drawing.Size(378, 37);
             this.comboBox1.TabIndex = 49;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(169, 217);
+            this.checkBox1.Location = new System.Drawing.Point(169, 222);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(120, 20);
             this.checkBox1.TabIndex = 48;
@@ -174,7 +174,7 @@
             // TB_Password
             // 
             this.TB_Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TB_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.TB_Password.Location = new System.Drawing.Point(170, 134);
             this.TB_Password.Multiline = true;
             this.TB_Password.Name = "TB_Password";
@@ -194,7 +194,7 @@
             // TB_Contact
             // 
             this.TB_Contact.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TB_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.TB_Contact.Location = new System.Drawing.Point(170, 255);
             this.TB_Contact.Multiline = true;
             this.TB_Contact.Name = "TB_Contact";
@@ -224,7 +224,7 @@
             // TB_Username
             // 
             this.TB_Username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TB_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.TB_Username.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
             this.TB_Username.Location = new System.Drawing.Point(170, 87);
             this.TB_Username.Multiline = true;
             this.TB_Username.Name = "TB_Username";
