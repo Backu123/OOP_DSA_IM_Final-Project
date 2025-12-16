@@ -34,7 +34,7 @@ namespace QR_Generator_Test_C_ {
             eventPanel.Width = 800;
             eventPanel.Height = 125;
             eventPanel.BorderStyle = BorderStyle.FixedSingle;
-            eventPanel.BackColor = Color.LightGray;
+            eventPanel.BackColor = Color.LightBlue;
             eventPanel.Margin = new Padding(15);
 
             eventPanel.Tag = ID;

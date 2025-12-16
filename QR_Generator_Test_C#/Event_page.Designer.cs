@@ -80,7 +80,7 @@
             this.TB_EventID.Location = new System.Drawing.Point(844, 36);
             this.TB_EventID.Multiline = true;
             this.TB_EventID.Name = "TB_EventID";
-            this.TB_EventID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TB_EventID.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TB_EventID.Size = new System.Drawing.Size(183, 29);
             this.TB_EventID.TabIndex = 3;
             // 
