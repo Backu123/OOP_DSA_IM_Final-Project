@@ -41,12 +41,12 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dashboardToolStripMenuItem,
             this.createEventToolStripMenuItem,
             this.eventsToolStripMenuItem,
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.dashboardToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(420, 28);
             this.menuStrip1.Name = "menuStrip1";
