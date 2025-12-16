@@ -19,12 +19,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createEventToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eventsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.qRGeneratingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dashboardToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userPanel = new System.Windows.Forms.Panel();
@@ -41,30 +41,21 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dashboardToolStripMenuItem,
             this.createEventToolStripMenuItem,
             this.eventsToolStripMenuItem,
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.createAdminStrip});
-            this.menuStrip1.Location = new System.Drawing.Point(374, 32);
+            this.dashboardToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(420, 28);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(616, 31);
+            this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
+            this.menuStrip1.Size = new System.Drawing.Size(460, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // dashboardToolStripMenuItem
-            // 
-            this.dashboardToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dashboardToolStripMenuItem.BackgroundImage")));
-            this.dashboardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(67, 27);
-            this.dashboardToolStripMenuItem.Text = "           ";
-            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
             // createEventToolStripMenuItem
             // 
@@ -113,6 +104,15 @@
             this.logoutToolStripMenuItem.Text = "          ";
             this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
             // 
+            // dashboardToolStripMenuItem
+            // 
+            this.dashboardToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("dashboardToolStripMenuItem.BackgroundImage")));
+            this.dashboardToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(67, 27);
+            this.dashboardToolStripMenuItem.Text = "           ";
+            this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("exitToolStripMenuItem.BackgroundImage")));
@@ -129,16 +129,22 @@
             // 
             // userPanel
             // 
-            this.userPanel.Location = new System.Drawing.Point(150, 200);
+            this.userPanel.BackColor = System.Drawing.Color.Transparent;
+            this.userPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userPanel.BackgroundImage")));
+            this.userPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.userPanel.Location = new System.Drawing.Point(55, 232);
             this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(200, 100);
+            this.userPanel.Size = new System.Drawing.Size(569, 327);
             this.userPanel.TabIndex = 1;
             // 
             // adminPanel
             // 
-            this.adminPanel.Location = new System.Drawing.Point(422, 200);
+            this.adminPanel.BackColor = System.Drawing.Color.Transparent;
+            this.adminPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminPanel.BackgroundImage")));
+            this.adminPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.adminPanel.Location = new System.Drawing.Point(671, 232);
             this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(200, 100);
+            this.adminPanel.Size = new System.Drawing.Size(557, 327);
             this.adminPanel.TabIndex = 2;
             this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint_1);
             // 

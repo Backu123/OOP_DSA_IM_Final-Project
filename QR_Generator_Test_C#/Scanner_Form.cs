@@ -514,5 +514,10 @@ namespace QR_Generator_Test_C_
             EventPanel eventPanel = new EventPanel(this.eventID);
             eventPanel.Show();
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

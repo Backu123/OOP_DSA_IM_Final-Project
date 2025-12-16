@@ -37,51 +37,57 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(50, 24);
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(3, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(96, 47);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Chronologically (Default)",
             "Alphabetical",
             "Numerical (Student ID)"});
-            this.comboBox1.Location = new System.Drawing.Point(793, 100);
+            this.comboBox1.Location = new System.Drawing.Point(740, 100);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 24);
+            this.comboBox1.Size = new System.Drawing.Size(324, 24);
             this.comboBox1.TabIndex = 1;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(589, 142);
+            this.dataGridView1.Location = new System.Drawing.Point(579, 146);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(529, 378);
+            this.dataGridView1.Size = new System.Drawing.Size(565, 383);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cbo
             // 
             this.cbo.FormattingEnabled = true;
-            this.cbo.Location = new System.Drawing.Point(38, 100);
+            this.cbo.Location = new System.Drawing.Point(32, 100);
             this.cbo.Name = "cbo";
-            this.cbo.Size = new System.Drawing.Size(415, 24);
+            this.cbo.Size = new System.Drawing.Size(454, 24);
             this.cbo.TabIndex = 4;
             this.cbo.SelectedIndexChanged += new System.EventHandler(this.cbo_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(38, 139);
+            this.pictureBox1.Location = new System.Drawing.Point(54, 160);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(422, 381);
+            this.pictureBox1.Size = new System.Drawing.Size(408, 385);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -105,18 +111,21 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(38, 34);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1212, 680);
+            this.panel1.Size = new System.Drawing.Size(1212, 627);
             this.panel1.TabIndex = 8;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // button3
             // 
+            this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(589, 58);
+            this.button3.Location = new System.Drawing.Point(579, 41);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 33);
+            this.button3.Size = new System.Drawing.Size(167, 45);
             this.button3.TabIndex = 10;
-            this.button3.Text = "View Attendance Result";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -146,11 +155,14 @@
             // 
             // Refresh
             // 
-            this.Refresh.Location = new System.Drawing.Point(589, 97);
+            this.Refresh.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Refresh.BackgroundImage")));
+            this.Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Refresh.FlatAppearance.BorderSize = 0;
+            this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Refresh.Location = new System.Drawing.Point(579, 92);
             this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(112, 31);
+            this.Refresh.Size = new System.Drawing.Size(102, 41);
             this.Refresh.TabIndex = 7;
-            this.Refresh.Text = "Refresh";
             this.Refresh.UseVisualStyleBackColor = true;
             this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
             // 

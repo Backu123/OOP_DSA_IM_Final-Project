@@ -222,7 +222,7 @@ namespace QR_Generator_Test_C_
         }
         private void loginUser_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         public bool UserExist()
@@ -440,8 +440,8 @@ namespace QR_Generator_Test_C_
             radioButton1.Checked = false;
             radioButton2.Checked = false;
         }
-        
-        
+
+
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -511,7 +511,7 @@ namespace QR_Generator_Test_C_
 
         private void loginPass_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -601,5 +601,7 @@ namespace QR_Generator_Test_C_
         {
             label6.ForeColor = Color.Gray;
         }
+
+
     }
 }
