@@ -52,7 +52,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(12, 16);
+            this.button1.Location = new System.Drawing.Point(56, 25);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 48);
             this.button1.TabIndex = 1;
@@ -67,9 +67,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(1051, 12);
+            this.button2.Location = new System.Drawing.Point(1033, 21);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 53);
+            this.button2.Size = new System.Drawing.Size(157, 56);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -77,7 +77,7 @@
             // TB_EventID
             // 
             this.TB_EventID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.TB_EventID.Location = new System.Drawing.Point(862, 27);
+            this.TB_EventID.Location = new System.Drawing.Point(844, 36);
             this.TB_EventID.Multiline = true;
             this.TB_EventID.Name = "TB_EventID";
             this.TB_EventID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

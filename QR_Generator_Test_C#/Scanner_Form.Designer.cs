@@ -41,7 +41,7 @@
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Location = new System.Drawing.Point(3, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(96, 47);
             this.button1.TabIndex = 0;
@@ -72,6 +72,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(565, 383);
             this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cbo
             // 
@@ -156,7 +157,7 @@
             this.Refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Refresh.FlatAppearance.BorderSize = 0;
             this.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Refresh.Location = new System.Drawing.Point(579, 87);
+            this.Refresh.Location = new System.Drawing.Point(579, 92);
             this.Refresh.Name = "Refresh";
             this.Refresh.Size = new System.Drawing.Size(102, 41);
             this.Refresh.TabIndex = 7;

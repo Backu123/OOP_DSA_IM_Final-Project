@@ -64,11 +64,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(666, 172);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(633, 164);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 25);
+            this.label1.Size = new System.Drawing.Size(77, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
             // 
@@ -76,11 +76,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(666, 225);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(633, 217);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.Size = new System.Drawing.Size(91, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Section:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -89,11 +89,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(666, 276);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(633, 268);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 25);
+            this.label3.Size = new System.Drawing.Size(111, 26);
             this.label3.TabIndex = 2;
             this.label3.Text = "Contact #:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -102,11 +102,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(666, 325);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(633, 317);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 25);
+            this.label4.Size = new System.Drawing.Size(56, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "Sex:";
             // 
@@ -127,7 +127,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(399, 154);
+            this.pictureBox1.Location = new System.Drawing.Point(370, 148);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(239, 268);
             this.pictureBox1.TabIndex = 10;
@@ -236,11 +236,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(666, 379);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(633, 371);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 25);
+            this.label6.Size = new System.Drawing.Size(63, 26);
             this.label6.TabIndex = 11;
             this.label6.Text = "Role:";
             // 
@@ -249,8 +249,8 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(467, 440);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(433, 431);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 25);
             this.label5.TabIndex = 8;
@@ -260,11 +260,11 @@
             // 
             this.Profile_Name.AutoSize = true;
             this.Profile_Name.BackColor = System.Drawing.Color.Transparent;
-            this.Profile_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Name.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile_Name.Location = new System.Drawing.Point(929, 172);
+            this.Profile_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.Profile_Name.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Profile_Name.Location = new System.Drawing.Point(896, 164);
             this.Profile_Name.Name = "Profile_Name";
-            this.Profile_Name.Size = new System.Drawing.Size(70, 25);
+            this.Profile_Name.Size = new System.Drawing.Size(77, 26);
             this.Profile_Name.TabIndex = 4;
             this.Profile_Name.Text = "Name:";
             this.Profile_Name.Visible = false;
@@ -273,11 +273,11 @@
             // 
             this.Profile_Section.AutoSize = true;
             this.Profile_Section.BackColor = System.Drawing.Color.Transparent;
-            this.Profile_Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Section.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile_Section.Location = new System.Drawing.Point(929, 225);
+            this.Profile_Section.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.Profile_Section.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Profile_Section.Location = new System.Drawing.Point(896, 217);
             this.Profile_Section.Name = "Profile_Section";
-            this.Profile_Section.Size = new System.Drawing.Size(84, 25);
+            this.Profile_Section.Size = new System.Drawing.Size(91, 26);
             this.Profile_Section.TabIndex = 5;
             this.Profile_Section.Text = "Section:";
             this.Profile_Section.Visible = false;
@@ -286,11 +286,11 @@
             // 
             this.Profile_Role.AutoSize = true;
             this.Profile_Role.BackColor = System.Drawing.Color.Transparent;
-            this.Profile_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Role.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile_Role.Location = new System.Drawing.Point(929, 379);
+            this.Profile_Role.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.Profile_Role.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Profile_Role.Location = new System.Drawing.Point(896, 371);
             this.Profile_Role.Name = "Profile_Role";
-            this.Profile_Role.Size = new System.Drawing.Size(51, 25);
+            this.Profile_Role.Size = new System.Drawing.Size(57, 26);
             this.Profile_Role.TabIndex = 12;
             this.Profile_Role.Text = "Role";
             // 
@@ -298,11 +298,11 @@
             // 
             this.Profile_Sex.AutoSize = true;
             this.Profile_Sex.BackColor = System.Drawing.Color.Transparent;
-            this.Profile_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Sex.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile_Sex.Location = new System.Drawing.Point(929, 325);
+            this.Profile_Sex.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.Profile_Sex.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Profile_Sex.Location = new System.Drawing.Point(896, 317);
             this.Profile_Sex.Name = "Profile_Sex";
-            this.Profile_Sex.Size = new System.Drawing.Size(53, 25);
+            this.Profile_Sex.Size = new System.Drawing.Size(56, 26);
             this.Profile_Sex.TabIndex = 7;
             this.Profile_Sex.Text = "Sex:";
             this.Profile_Sex.Visible = false;
@@ -311,11 +311,11 @@
             // 
             this.Profile_Contact.AutoSize = true;
             this.Profile_Contact.BackColor = System.Drawing.Color.Transparent;
-            this.Profile_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Profile_Contact.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Profile_Contact.Location = new System.Drawing.Point(929, 276);
+            this.Profile_Contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.Profile_Contact.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Profile_Contact.Location = new System.Drawing.Point(896, 268);
             this.Profile_Contact.Name = "Profile_Contact";
-            this.Profile_Contact.Size = new System.Drawing.Size(102, 25);
+            this.Profile_Contact.Size = new System.Drawing.Size(111, 26);
             this.Profile_Contact.TabIndex = 6;
             this.Profile_Contact.Text = "Contact #:";
             this.Profile_Contact.Visible = false;

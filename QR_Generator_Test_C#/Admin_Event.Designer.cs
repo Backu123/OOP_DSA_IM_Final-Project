@@ -43,9 +43,9 @@
             this.flowEventsPanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.flowEventsPanel.BackColor = System.Drawing.Color.Transparent;
             this.flowEventsPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.flowEventsPanel.Location = new System.Drawing.Point(95, 116);
+            this.flowEventsPanel.Location = new System.Drawing.Point(47, 112);
             this.flowEventsPanel.Name = "flowEventsPanel";
-            this.flowEventsPanel.Size = new System.Drawing.Size(1006, 488);
+            this.flowEventsPanel.Size = new System.Drawing.Size(1124, 534);
             this.flowEventsPanel.TabIndex = 0;
             this.flowEventsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -58,7 +58,7 @@
             this.createEventButton.FlatAppearance.BorderSize = 0;
             this.createEventButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createEventButton.ForeColor = System.Drawing.Color.Transparent;
-            this.createEventButton.Location = new System.Drawing.Point(161, 51);
+            this.createEventButton.Location = new System.Drawing.Point(999, 41);
             this.createEventButton.Name = "createEventButton";
             this.createEventButton.Size = new System.Drawing.Size(162, 65);
             this.createEventButton.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Back.FlatAppearance.BorderSize = 0;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Location = new System.Drawing.Point(95, 61);
+            this.Back.Location = new System.Drawing.Point(37, 49);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(60, 45);
             this.Back.TabIndex = 2;
