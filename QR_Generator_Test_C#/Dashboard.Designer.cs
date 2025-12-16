@@ -29,6 +29,7 @@
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.userPanel = new System.Windows.Forms.Panel();
             this.adminPanel = new System.Windows.Forms.Panel();
+            this.createAdminStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.createAdminStrip});
             this.menuStrip1.Location = new System.Drawing.Point(374, 32);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(460, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(616, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -140,11 +142,19 @@
             this.adminPanel.TabIndex = 2;
             this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint_1);
             // 
+            // createAdminStrip
+            // 
+            this.createAdminStrip.Name = "createAdminStrip";
+            this.createAdminStrip.Size = new System.Drawing.Size(156, 27);
+            this.createAdminStrip.Text = "toolStripMenuItem1";
+            this.createAdminStrip.Click += new System.EventHandler(this.createAdminStrip_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.adminPanel);
             this.Controls.Add(this.userPanel);
@@ -175,5 +185,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel userPanel;
         private System.Windows.Forms.Panel adminPanel;
+        private System.Windows.Forms.ToolStripMenuItem createAdminStrip;
     }
 }

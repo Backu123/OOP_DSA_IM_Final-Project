@@ -28,7 +28,7 @@ namespace QR_Generator_Test_C_
 
         private void Scanner_Form_Load(object sender, EventArgs e)
         {
-            // ───── ComboBox setup (DO NOT set SelectedIndex yet)
+            // ───── ComboBox setup (dont set SelectedIndex yet)
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
 
             // ───── Camera setup
@@ -511,7 +511,7 @@ namespace QR_Generator_Test_C_
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EventPanel eventPanel = new EventPanel();
+            EventPanel eventPanel = new EventPanel(this.eventID);
             eventPanel.Show();
         }
     }

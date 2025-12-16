@@ -122,10 +122,12 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1071, 97);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(1070, 95);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(47, 31);
+            this.button2.Size = new System.Drawing.Size(48, 31);
             this.button2.TabIndex = 9;
+            this.button2.Text = "<>";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

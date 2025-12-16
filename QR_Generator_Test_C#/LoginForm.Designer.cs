@@ -32,13 +32,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.loginOTP = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.loginUser = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnSendOTP = new System.Windows.Forms.Button();
             this.loginPass = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.TB_Password = new System.Windows.Forms.TextBox();
             this.TB_Contact = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -100,20 +100,20 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Password";
             // 
-            // textBox1
+            // loginOTP
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBox1.Location = new System.Drawing.Point(806, 402);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(172, 25);
-            this.textBox1.TabIndex = 22;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
-            this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            this.textBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
+            this.loginOTP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.loginOTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.loginOTP.Location = new System.Drawing.Point(806, 402);
+            this.loginOTP.Multiline = true;
+            this.loginOTP.Name = "loginOTP";
+            this.loginOTP.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.loginOTP.Size = new System.Drawing.Size(172, 25);
+            this.loginOTP.TabIndex = 22;
+            this.loginOTP.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.loginOTP.Enter += new System.EventHandler(this.textBox1_Enter);
+            this.loginOTP.Leave += new System.EventHandler(this.textBox1_Leave);
+            this.loginOTP.MouseDown += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDown);
             // 
             // label1
             // 
@@ -155,21 +155,21 @@
             this.loginUser.Leave += new System.EventHandler(this.loginUser_Leave);
             this.loginUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginUser_MouseDown);
             // 
-            // button3
+            // btnSendOTP
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(984, 402);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(87, 25);
-            this.button3.TabIndex = 24;
-            this.button3.Text = "Send OTP";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnSendOTP.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSendOTP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSendOTP.FlatAppearance.BorderSize = 0;
+            this.btnSendOTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSendOTP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSendOTP.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSendOTP.Location = new System.Drawing.Point(984, 402);
+            this.btnSendOTP.Name = "btnSendOTP";
+            this.btnSendOTP.Size = new System.Drawing.Size(87, 25);
+            this.btnSendOTP.TabIndex = 24;
+            this.btnSendOTP.Text = "Send OTP";
+            this.btnSendOTP.UseVisualStyleBackColor = false;
+            this.btnSendOTP.Click += new System.EventHandler(this.button3_Click);
             // 
             // loginPass
             // 
@@ -186,22 +186,22 @@
             this.loginPass.Leave += new System.EventHandler(this.loginPass_Leave);
             this.loginPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.loginPass_MouseDown);
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(848, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(168, 59);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnLogin.BackColor = System.Drawing.Color.White;
+            this.btnLogin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogin.BackgroundImage")));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.btnLogin.Location = new System.Drawing.Point(848, 450);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(168, 59);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.button1_Click);
             // 
             // TB_Password
             // 
@@ -460,12 +460,12 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.TB_Username);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.loginPass);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnSendOTP);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.radioButton1);
@@ -480,7 +480,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TB_Contact);
             this.Controls.Add(this.TB_Password);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.loginOTP);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -503,13 +503,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox loginOTP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox loginUser;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSendOTP;
         private System.Windows.Forms.TextBox loginPass;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox TB_Password;
         private System.Windows.Forms.TextBox TB_Contact;
         private System.Windows.Forms.Label label5;

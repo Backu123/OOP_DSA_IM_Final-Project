@@ -44,6 +44,7 @@ namespace QR_Generator_Test_C_
             label.SetBounds(10, 20, 280, 20);
 
             textBox.SetBounds(10, 50, 280, 25);
+            textBox.PasswordChar = '*';
 
             buttonOk.Text = "OK";
             buttonOk.SetBounds(115, 90, 75, 30);
@@ -120,7 +121,6 @@ namespace QR_Generator_Test_C_
         private void Panel_Click(object sender, EventArgs e)
         {
             string inputPass = ShowInputDialog("Validation", "Please re-enter your password: ");
-            inputPass = inputPass.Trim();
             try
             {
                 if (inputPass.Equals(Profile_Info.Instance.getPassword()))
@@ -190,54 +190,78 @@ namespace QR_Generator_Test_C_
             if (string.IsNullOrEmpty(TB_EventID.Text))
             {
                 MessageBox.Show("Please Input an Event ID.");
+                return;
             }
-            else
-            {
-                DB db = new DB();
 
-                string insertQuery = "INSERT INTO user_event(Student_ID, Event_ID) VALUES (@studentID, @eventID)";
-                string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting 
+            DB db = new DB();
+
+            string checkQuery = @"SELECT 1 
+                          FROM user_event 
+                          WHERE Student_ID = @studentID 
+                            AND Event_ID = @eventID 
+                          LIMIT 1";
+
+            string insertQuery = @"INSERT INTO user_event(Student_ID, Event_ID) 
+                           VALUES (@studentID, @eventID)";
+
+            string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting 
                                 FROM events 
                                 WHERE EventID = @eventID";
 
-                using (MySqlConnection conn = db.GetConnection())
+            using (MySqlConnection conn = db.GetConnection())
+            {
+                conn.Open();
+
+                using (MySqlCommand checkCmd = new MySqlCommand(checkQuery, conn))
                 {
-                    conn.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(insertQuery, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@studentID", Profile_Info.Instance.userID());
-                        cmd.Parameters.AddWithValue("@eventID", TB_EventID.Text);
+                    checkCmd.Parameters.AddWithValue("@studentID", Profile_Info.Instance.userID());
+                    checkCmd.Parameters.AddWithValue("@eventID", TB_EventID.Text);
 
-                        cmd.ExecuteNonQuery();
+                    object exists = checkCmd.ExecuteScalar();
+
+                    if (exists != null)
+                    {
+                        MessageBox.Show("You are already registered in this event.");
+                        TB_EventID.Clear();
+                        return;
                     }
-                    using (MySqlCommand cmd2 = new MySqlCommand(selectEventQuery, conn))
+                }
+
+                using (MySqlCommand insertCmd = new MySqlCommand(insertQuery, conn))
+                {
+                    insertCmd.Parameters.AddWithValue("@studentID", Profile_Info.Instance.userID());
+                    insertCmd.Parameters.AddWithValue("@eventID", TB_EventID.Text);
+                    insertCmd.ExecuteNonQuery();
+                }
+
+                using (MySqlCommand cmd2 = new MySqlCommand(selectEventQuery, conn))
+                {
+                    cmd2.Parameters.AddWithValue("@eventID", TB_EventID.Text);
+
+                    using (MySqlDataReader reader = cmd2.ExecuteReader())
                     {
-                        cmd2.Parameters.AddWithValue("@eventID", TB_EventID.Text);
-
-                        using (MySqlDataReader reader = cmd2.ExecuteReader())
+                        if (reader.Read())
                         {
-                            if (reader.Read())
-                            {
-                                string eventID = reader["EventID"].ToString();
-                                string eventTitle = reader["EventTitle"].ToString();
-                                string eventDesc = reader["EventDesc"].ToString();
-                                string eventCategory = reader["EventCategory"].ToString();
-                                DateTime eventDuration = (DateTime)reader["EventDate"];
-                                string eventSetting = reader["EventSetting"].ToString();
-
-                                // Show only the selected event
-                                AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, eventDuration, eventSetting);
-                            }
-                            else
-                            {
-                                MessageBox.Show("Event ID not found.");
-                            }
+                            AddEventPanel(
+                                reader["EventID"].ToString(),
+                                reader["EventTitle"].ToString(),
+                                reader["EventDesc"].ToString(),
+                                reader["EventCategory"].ToString(),
+                                Convert.ToDateTime(reader["EventDate"]),
+                                reader["EventSetting"].ToString()
+                            );
+                        }
+                        else
+                        {
+                            MessageBox.Show("Event ID not found.");
                         }
                     }
                 }
-                TB_EventID.Text = "";
             }
+
+            TB_EventID.Clear();
         }
+
 
     }
 }

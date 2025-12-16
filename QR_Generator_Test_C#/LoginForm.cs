@@ -7,6 +7,8 @@ namespace QR_Generator_Test_C_
 {
     public partial class LoginForm : Form
     {
+        string userPhoneNumber;
+
         public LoginForm()
         {
             InitializeComponent();
@@ -250,9 +252,42 @@ namespace QR_Generator_Test_C_
 
         }
 
+        private bool ValidateLogin(string username, string password)
+        {
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+
+            string query = @"SELECT COUNT(*) 
+                     FROM users 
+                     WHERE username = @user 
+                       AND password = @pass";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@user", username);
+            cmd.Parameters.AddWithValue("@pass", password);
+
+            try
+            {
+                db.OpenConnection();
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return false;
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+        }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
 
+            // Populate Profile_Info AFTER successful login
             Profile_Info.Instance.setUsername(accUsername());
             Profile_Info.Instance.setSection(accSection());
             Profile_Info.Instance.setContactNum(accNum());
@@ -260,26 +295,24 @@ namespace QR_Generator_Test_C_
             Profile_Info.Instance.setSex(accSex());
             Profile_Info.Instance.setRole(accRole());
 
-            if (string.IsNullOrWhiteSpace(loginUser.Text) || string.IsNullOrWhiteSpace(loginPass.Text))
+            if (string.IsNullOrEmpty(loginUser.Text) || string.IsNullOrEmpty(loginPass.Text))
             {
-                MessageBox.Show("Please input a valid information.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please Complete the Form");
             }
             else
             {
-                if (UserExist())
-                {
-                    Dashboard dashboard = new Dashboard();
-                    dashboard.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("Your Account doesn't exist.");
-                }
+                // Login successful, show dashboard
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+                this.Hide();
             }
-            loginUser.Text = "";
-            loginPass.Text = "";
+
+            // Clear input fields
+            loginUser.Clear();
+            loginPass.Clear();
+            loginOTP.Clear();
         }
+
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -295,11 +328,43 @@ namespace QR_Generator_Test_C_
         {
 
         }
+
+        private String GetUserPhone(string username)
+        {
+            string contactNum = "";
+            DB db = new DB();
+            MySqlConnection conn = db.GetConnection();
+            string query = "SELECT contactNum FROM users WHERE username = @users";
+
+            MySqlCommand cmd = new MySqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@users", loginUser.Text);
+
+            try
+            {
+                db.OpenConnection();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                if(reader.Read())
+                {
+                    contactNum = reader["contactNum"].ToString();
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                db.CloseConnection();
+            }
+            return contactNum;
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
-
+            
         }
-        
+
 
         public String getUsername()
         {
@@ -518,7 +583,7 @@ namespace QR_Generator_Test_C_
         }
 
         private void TB_Password_Enter(object sender, EventArgs e)
-        {
+        {   
             label8.ForeColor = Color.Orange;
         }
 

@@ -86,12 +86,15 @@ namespace QR_Generator_Test_C_
                 Profile_Sex.Text = sex;
                 Profile_ID.Text = studentID;
                 Profile_Contact.Text = "0" + contactNum.ToString();
+                Profile_Role.Text = Profile_Info.Instance.getRole();
+                
 
                 Profile_ID.Visible = true;
                 Profile_Name.Visible = true;
                 Profile_Section.Visible = true;
                 Profile_Contact.Visible = true;
                 Profile_Sex.Visible = true;
+            Profile_Role.Visible = true;
 
                 panel1.Visible = true;
                 panel2.Visible = false;
