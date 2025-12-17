@@ -2,13 +2,14 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace QR_Generator_Test_C_
 {
     public partial class LoginForm : Form
     {
         string userPhoneNumber;
-
+        private SimpleOTP otpService = new SimpleOTP();
         public LoginForm()
         {
             InitializeComponent();
@@ -286,8 +287,28 @@ namespace QR_Generator_Test_C_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // 1️⃣ Empty check
+            if (string.IsNullOrWhiteSpace(loginUser.Text) ||
+                string.IsNullOrWhiteSpace(loginPass.Text) ||
+                string.IsNullOrWhiteSpace(loginOTP.Text))
+            {
+                MessageBox.Show("Please complete the form");
+                loginUser.Clear();
+                loginPass.Clear();
+                loginOTP.Clear();
+                return;
+            }
 
-            // Populate Profile_Info AFTER successful login
+            // 2️⃣ Validate OTP
+            if (!otpService.Validate(loginOTP.Text))
+            {
+                MessageBox.Show("Invalid OTP");
+                loginUser.Clear();
+                loginPass.Clear();
+                loginOTP.Clear();
+                return;
+            }
+
             Profile_Info.Instance.setUsername(accUsername());
             Profile_Info.Instance.setSection(accSection());
             Profile_Info.Instance.setContactNum(accNum());
@@ -295,23 +316,13 @@ namespace QR_Generator_Test_C_
             Profile_Info.Instance.setSex(accSex());
             Profile_Info.Instance.setRole(accRole());
 
-            if (string.IsNullOrEmpty(loginUser.Text) || string.IsNullOrEmpty(loginPass.Text))
-            {
-                MessageBox.Show("Please Complete the Form");
-            }
-            else
-            {
-                // Login successful, show dashboard
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-                this.Hide();
-            }
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
 
-            // Clear input fields
-            loginUser.Clear();
-            loginPass.Clear();
-            loginOTP.Clear();
+            
         }
+
 
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -362,8 +373,11 @@ namespace QR_Generator_Test_C_
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            string otp = otpService.Generate();
+
+            MessageBox.Show("Your OTP is: " + otp);
         }
+
 
 
         public String getUsername()

@@ -231,6 +231,7 @@
     <Compile Include="Scanner_Form.Designer.cs">
       <DependentUpon>Scanner_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="SimpleOTP.cs" />
     <Compile Include="User_Event.cs">
       <SubType>Form</SubType>
     </Compile>

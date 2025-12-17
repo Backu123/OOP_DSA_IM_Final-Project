@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using iTextFont = iTextSharp.text.Font;
 
 
 namespace QR_Generator_Test_C_
@@ -62,16 +63,15 @@ namespace QR_Generator_Test_C_
             PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
             doc.Open();
 
-            /*// Title
-            Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            iTextFont titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
             Paragraph title = new Paragraph("EVENT ATTENDANCE REPORT\n\n", titleFont);
             title.Alignment = Element.ALIGN_CENTER;
             doc.Add(title);
 
             // Event info
-            Font infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextFont infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
             doc.Add(new Paragraph($"Event ID: {eventID}", infoFont));
-            doc.Add(new Paragraph($"Generated on: {DateTime.Now:MMMM dd, yyyy}\n\n", infoFont));*/
+            doc.Add(new Paragraph($"Generated on: {DateTime.Now:MMMM dd, yyyy}\n\n", infoFont));
 
             // WHOLE LIST (combine present + absent)
             DataGridView allDGV = new DataGridView();
