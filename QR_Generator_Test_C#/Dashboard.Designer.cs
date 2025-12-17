@@ -27,10 +27,9 @@
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.userPanel = new System.Windows.Forms.Panel();
-            this.adminPanel = new System.Windows.Forms.Panel();
             this.createAdminStrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.createAdminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,27 +128,6 @@
             this.createAdminMenuItem.Name = "createAdminMenuItem";
             this.createAdminMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
-            // userPanel
-            // 
-            this.userPanel.BackColor = System.Drawing.Color.Transparent;
-            this.userPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userPanel.BackgroundImage")));
-            this.userPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.userPanel.Location = new System.Drawing.Point(55, 232);
-            this.userPanel.Name = "userPanel";
-            this.userPanel.Size = new System.Drawing.Size(569, 327);
-            this.userPanel.TabIndex = 1;
-            // 
-            // adminPanel
-            // 
-            this.adminPanel.BackColor = System.Drawing.Color.Transparent;
-            this.adminPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminPanel.BackgroundImage")));
-            this.adminPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.adminPanel.Location = new System.Drawing.Point(671, 232);
-            this.adminPanel.Name = "adminPanel";
-            this.adminPanel.Size = new System.Drawing.Size(557, 327);
-            this.adminPanel.TabIndex = 2;
-            this.adminPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.adminPanel_Paint_1);
-            // 
             // createAdminStrip
             // 
             this.createAdminStrip.Name = "createAdminStrip";
@@ -157,12 +135,31 @@
             this.createAdminStrip.Text = "toolStripMenuItem1";
             this.createAdminStrip.Click += new System.EventHandler(this.createAdminStrip_Click);
             // 
-            // createAdminToolStripMenuItem
+            // button1
             // 
-            this.createAdminToolStripMenuItem.Name = "createAdminToolStripMenuItem";
-            this.createAdminToolStripMenuItem.Size = new System.Drawing.Size(114, 27);
-            this.createAdminToolStripMenuItem.Text = "Create Admin";
-            this.createAdminToolStripMenuItem.Click += new System.EventHandler(this.createAdminToolStripMenuItem_Click);
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(486, 453);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(290, 92);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Haettenschweiler", 69F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(253, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(811, 120);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Create an Event Now!";
             // 
             // Dashboard
             // 
@@ -171,8 +168,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
-            this.Controls.Add(this.adminPanel);
-            this.Controls.Add(this.userPanel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
@@ -198,9 +195,8 @@
         private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem createAdminMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel userPanel;
-        private System.Windows.Forms.Panel adminPanel;
         private System.Windows.Forms.ToolStripMenuItem createAdminStrip;
-        private System.Windows.Forms.ToolStripMenuItem createAdminToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
     }
 }

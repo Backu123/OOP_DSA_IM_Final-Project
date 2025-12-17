@@ -181,11 +181,9 @@ namespace QR_Generator_Test_C_
             this.Hide();
         }
 
-        private void createAdminToolStripMenuItem_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            Create_Admin create_Admin = new Create_Admin();
-            create_Admin.Show();
-            this.Hide();
+
         }
     }
 }

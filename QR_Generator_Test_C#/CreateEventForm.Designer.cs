@@ -53,7 +53,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label1.Location = new System.Drawing.Point(382, 153);
+            this.label1.Location = new System.Drawing.Point(382, 135);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 0;
@@ -65,7 +65,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(381, 446);
+            this.label3.Location = new System.Drawing.Point(381, 428);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 2;
@@ -77,7 +77,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label4.Location = new System.Drawing.Point(379, 299);
+            this.label4.Location = new System.Drawing.Point(379, 281);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 3;
@@ -89,7 +89,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label5.Location = new System.Drawing.Point(381, 350);
+            this.label5.Location = new System.Drawing.Point(381, 332);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 20);
             this.label5.TabIndex = 4;
@@ -101,7 +101,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(381, 400);
+            this.label6.Location = new System.Drawing.Point(381, 382);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 5;
@@ -112,7 +112,7 @@
             this.TB_ID.BackColor = System.Drawing.Color.Black;
             this.TB_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TB_ID.ForeColor = System.Drawing.Color.White;
-            this.TB_ID.Location = new System.Drawing.Point(385, 175);
+            this.TB_ID.Location = new System.Drawing.Point(385, 157);
             this.TB_ID.Name = "TB_ID";
             this.TB_ID.Size = new System.Drawing.Size(379, 30);
             this.TB_ID.TabIndex = 6;
@@ -122,7 +122,7 @@
             this.TB_Desc.BackColor = System.Drawing.Color.Black;
             this.TB_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TB_Desc.ForeColor = System.Drawing.Color.White;
-            this.TB_Desc.Location = new System.Drawing.Point(385, 471);
+            this.TB_Desc.Location = new System.Drawing.Point(385, 453);
             this.TB_Desc.Multiline = true;
             this.TB_Desc.Name = "TB_Desc";
             this.TB_Desc.Size = new System.Drawing.Size(379, 87);
@@ -140,7 +140,7 @@
             "Campus-Wide",
             "College Event",
             "Subject Event"});
-            this.CB_Category.Location = new System.Drawing.Point(479, 291);
+            this.CB_Category.Location = new System.Drawing.Point(479, 273);
             this.CB_Category.Name = "CB_Category";
             this.CB_Category.Size = new System.Drawing.Size(285, 33);
             this.CB_Category.TabIndex = 9;
@@ -150,6 +150,7 @@
             this.CB_Settings.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.CB_Settings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CB_Settings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.CB_Settings.ForeColor = System.Drawing.Color.White;
             this.CB_Settings.FormattingEnabled = true;
             this.CB_Settings.Items.AddRange(new object[] {
             "Off-Campus",
@@ -157,7 +158,7 @@
             "New CCS Building",
             "Campus Gymnasium",
             "Campus Field"});
-            this.CB_Settings.Location = new System.Drawing.Point(513, 395);
+            this.CB_Settings.Location = new System.Drawing.Point(513, 377);
             this.CB_Settings.Name = "CB_Settings";
             this.CB_Settings.Size = new System.Drawing.Size(251, 33);
             this.CB_Settings.TabIndex = 11;
@@ -170,7 +171,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(479, 584);
+            this.button1.Location = new System.Drawing.Point(479, 541);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(185, 72);
             this.button1.TabIndex = 12;
@@ -186,7 +187,7 @@
             this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(495, 345);
+            this.dateTimePicker1.Location = new System.Drawing.Point(495, 327);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(269, 30);
             this.dateTimePicker1.TabIndex = 13;
@@ -201,7 +202,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(288, 82);
+            this.button2.Location = new System.Drawing.Point(282, 61);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(60, 45);
             this.button2.TabIndex = 14;
@@ -214,7 +215,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label2.Location = new System.Drawing.Point(382, 218);
+            this.label2.Location = new System.Drawing.Point(382, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 20);
             this.label2.TabIndex = 1;
@@ -226,7 +227,7 @@
             this.TB_Title.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.TB_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TB_Title.ForeColor = System.Drawing.Color.White;
-            this.TB_Title.Location = new System.Drawing.Point(385, 241);
+            this.TB_Title.Location = new System.Drawing.Point(385, 223);
             this.TB_Title.Name = "TB_Title";
             this.TB_Title.Size = new System.Drawing.Size(379, 30);
             this.TB_Title.TabIndex = 7;
@@ -238,7 +239,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Haettenschweiler", 30F);
             this.label7.ForeColor = System.Drawing.Color.Snow;
-            this.label7.Location = new System.Drawing.Point(475, 79);
+            this.label7.Location = new System.Drawing.Point(475, 61);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 52);
             this.label7.TabIndex = 33;
@@ -252,7 +253,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1280, 811);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dateTimePicker1);
@@ -269,7 +270,6 @@
             this.Controls.Add(this.TB_Title);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "CreateEventForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateEventForm";

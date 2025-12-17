@@ -303,7 +303,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Haettenschweiler", 30F);
             this.label4.ForeColor = System.Drawing.Color.Snow;
-            this.label4.Location = new System.Drawing.Point(220, 116);
+            this.label4.Location = new System.Drawing.Point(231, 116);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 52);
             this.label4.TabIndex = 6;
@@ -342,7 +342,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Heavy", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(219, 532);
+            this.button2.Location = new System.Drawing.Point(220, 532);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(163, 60);
             this.button2.TabIndex = 21;
