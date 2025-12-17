@@ -42,7 +42,7 @@ namespace QR_Generator_Test_C_
             qRGeneratingToolStripMenuItem.Visible = false;
             if (Profile_Info.Instance.getRole() == "Admin")
             {
-                createEventToolStripMenuItem.Visible = true;
+                createEventToolStripMenuItem.Visible = true;    
                 createAdminMenuItem.Visible = true;
                 eventsToolStripMenuItem.Visible = false;
             }
