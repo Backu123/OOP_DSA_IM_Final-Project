@@ -35,7 +35,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 483);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Start_Page";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start_Page";
             this.Click += new System.EventHandler(this.Start_Page_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Start_Page_KeyDown);

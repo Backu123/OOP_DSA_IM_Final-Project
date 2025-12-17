@@ -30,6 +30,7 @@
             this.createAdminStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.adminCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,11 +48,12 @@
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.adminCreate});
             this.menuStrip1.Location = new System.Drawing.Point(403, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(460, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(600, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -161,6 +163,13 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "Create an Event Now!";
             // 
+            // adminCreate
+            // 
+            this.adminCreate.Name = "adminCreate";
+            this.adminCreate.Size = new System.Drawing.Size(108, 27);
+            this.adminCreate.Text = "adminCreate";
+            this.adminCreate.Click += new System.EventHandler(this.adminCreate_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -198,5 +207,6 @@
         private System.Windows.Forms.ToolStripMenuItem createAdminStrip;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem adminCreate;
     }
 }
