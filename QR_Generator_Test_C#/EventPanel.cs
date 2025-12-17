@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using System.IO;
+using iTextFont = iTextSharp.text.Font;
 
 
 namespace QR_Generator_Test_C_
@@ -62,16 +63,15 @@ namespace QR_Generator_Test_C_
             PdfWriter.GetInstance(doc, new FileStream(sfd.FileName, FileMode.Create));
             doc.Open();
 
-            /*// Title
-            Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+            iTextFont titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
             Paragraph title = new Paragraph("EVENT ATTENDANCE REPORT\n\n", titleFont);
             title.Alignment = Element.ALIGN_CENTER;
             doc.Add(title);
 
             // Event info
-            Font infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+            iTextFont infoFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
             doc.Add(new Paragraph($"Event ID: {eventID}", infoFont));
-            doc.Add(new Paragraph($"Generated on: {DateTime.Now:MMMM dd, yyyy}\n\n", infoFont));*/
+            doc.Add(new Paragraph($"Generated on: {DateTime.Now:MMMM dd, yyyy}\n\n", infoFont));
 
             // WHOLE LIST (combine present + absent)
             DataGridView allDGV = new DataGridView();
@@ -97,35 +97,45 @@ namespace QR_Generator_Test_C_
 
         private void AddDGVSectionToPDF(Document doc, DataGridView dgv, string sectionTitle)
         {
-            // Section title
-            /*Font sectionFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
-            Paragraph section = new Paragraph(sectionTitle + "\n\n", sectionFont);
-            section.SpacingBefore = 10f;
-            section.SpacingAfter = 5f;
-            doc.Add(section);*/
+            // Space before section
+            doc.Add(new Paragraph("\n"));
 
-            // Table
+            // Section title
+            iTextFont sectionFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 12);
+            Paragraph sectionHeader = new Paragraph(sectionTitle, sectionFont);
+            sectionHeader.Alignment = Element.ALIGN_LEFT;
+            doc.Add(sectionHeader);
+
+            // Small space after title
+            doc.Add(new Paragraph("\n"));
+
+            // Create table
             PdfPTable table = new PdfPTable(dgv.Columns.Count);
             table.WidthPercentage = 100;
+            table.SpacingBefore = 5f;
+            table.SpacingAfter = 10f;
 
-            // Header
+            // Header font
+            iTextFont headerFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 10);
+            iTextFont cellFont = FontFactory.GetFont(FontFactory.HELVETICA, 10);
+
+            // Add headers
             foreach (DataGridViewColumn col in dgv.Columns)
             {
-                PdfPCell header = new PdfPCell(new Phrase(col.HeaderText))
-                {
-                    BackgroundColor = BaseColor.LIGHT_GRAY
-                };
-                table.AddCell(header);
+                PdfPCell headerCell = new PdfPCell(new Phrase(col.HeaderText, headerFont));
+                headerCell.HorizontalAlignment = Element.ALIGN_CENTER;
+                headerCell.BackgroundColor = BaseColor.LIGHT_GRAY;
+                table.AddCell(headerCell);
             }
 
-            // Rows
+            // Add rows
             foreach (DataGridViewRow row in dgv.Rows)
             {
                 if (row.IsNewRow) continue;
 
                 foreach (DataGridViewCell cell in row.Cells)
                 {
-                    table.AddCell(cell.Value?.ToString() ?? "");
+                    table.AddCell(new Phrase(cell.Value?.ToString() ?? "", cellFont));
                 }
             }
 
@@ -133,11 +143,13 @@ namespace QR_Generator_Test_C_
         }
 
 
+
         private string FormatStudentID(string rawID)
         {
             int id = int.Parse(rawID);
             return $"0325-{id:0000}";
         }
+
 
         private void SIgn_Up_Load(object sender, EventArgs e)
         {

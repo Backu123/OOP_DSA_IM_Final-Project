@@ -26,6 +26,105 @@ namespace QR_Generator_Test_C_
             this.eventID = eventID;
         }
 
+
+        private void EnhanceDGVHeaderFont()
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            // Slightly bigger header font (keeps same font family)
+            dataGridView1.ColumnHeadersDefaultCellStyle.Font =
+                new Font(dataGridView1.Font.FontFamily,
+                         dataGridView1.Font.Size + 1.5f,
+                         FontStyle.Bold);
+
+            // Force single-line header text
+            dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode =
+                DataGridViewTriState.False;
+
+            // Increase height to fit bigger text
+            dataGridView1.ColumnHeadersHeight = 45;
+            dataGridView1.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            // Optional: center header text vertically
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleLeft;
+        }
+        private void EnhanceDGVHeader()
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            // Stronger blue header
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor =
+                Color.FromArgb(25, 118, 210); // Deeper blue
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            // Increase header height
+            dataGridView1.ColumnHeadersHeight = 45;
+            dataGridView1.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            // Add spacing inside header cells (makes text breathe)
+            dataGridView1.ColumnHeadersDefaultCellStyle.Padding =
+                new Padding(5, 0, 5, 0);
+
+            // Clear visual separation from rows
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridView1.GridColor = Color.FromArgb(180, 215, 250);
+        }
+        private void StyleDataGridView()
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.RowHeadersVisible = false;
+
+            // ───── Header colors
+            dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(33, 150, 243); // Blue
+            dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+
+            // ───── Row colors
+            dataGridView1.RowsDefaultCellStyle.BackColor = Color.FromArgb(227, 242, 253); // Light blue
+            dataGridView1.AlternatingRowsDefaultCellStyle.BackColor = Color.White;
+
+            // ───── Selection colors
+            dataGridView1.RowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(30, 136, 229); // Dark blue
+            dataGridView1.RowsDefaultCellStyle.SelectionForeColor = Color.White;
+
+            // ───── Grid & borders
+            dataGridView1.GridColor = Color.FromArgb(200, 230, 255);
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+        }
+        private void MakeDGVHeaderVisible()
+        {
+            dataGridView1.EnableHeadersVisualStyles = false;
+
+            // Remove header borders
+            dataGridView1.ColumnHeadersBorderStyle =
+                DataGridViewHeaderBorderStyle.None;
+
+            // Optional: keep row borders subtle
+            dataGridView1.CellBorderStyle =
+                DataGridViewCellBorderStyle.SingleHorizontal;
+
+            // Keep single-line headers
+            dataGridView1.ColumnHeadersDefaultCellStyle.WrapMode =
+                DataGridViewTriState.False;
+
+            // Enough height for header text
+            dataGridView1.ColumnHeadersHeight = 35;
+            dataGridView1.ColumnHeadersHeightSizeMode =
+                DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            // Auto-size columns based on header content
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.AllCells;
+
+            // Align nicely
+            dataGridView1.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleLeft;
+        }
+
         private void Scanner_Form_Load(object sender, EventArgs e)
         {
             // ───── ComboBox setup (dont set SelectedIndex yet)
@@ -61,6 +160,11 @@ namespace QR_Generator_Test_C_
             dataGridView1.Columns["TimeIn"].SortMode = DataGridViewColumnSortMode.Programmatic;
             dataGridView1.Columns["Student_Name"].SortMode = DataGridViewColumnSortMode.Programmatic;
             dataGridView1.Columns["Student_ID"].SortMode = DataGridViewColumnSortMode.Programmatic;
+
+            StyleDataGridView();
+            EnhanceDGVHeader();
+            EnhanceDGVHeaderFont();
+            MakeDGVHeaderVisible();
 
             // ───── Load data from MySQL
             DB db = new DB();
@@ -261,6 +365,9 @@ namespace QR_Generator_Test_C_
 
                     // Load last attendance to show in DataGridView
                     LoadLastAttendance(studentID);
+                    // Load last attendance to show in DataGridView
+                    UpdateAttendanceDGV(studentID, studentName);
+
                 }
                 else
                 {
@@ -281,14 +388,15 @@ namespace QR_Generator_Test_C_
 
         private void LoadLastAttendance(string studentID)
         {
-            /*DB db = new DB();
+            /*dataGridView1.Rows.Clear();
+            DB db = new DB();
             MySqlConnection conn = db.GetConnection();
 
             string query = @"SELECT AttendanceID, Student_ID, Student_Name, Event_ID, TimeIn, TimeOut, ScanDate
                              FROM attendance
                              WHERE Student_ID = @sid
                              ORDER BY AttendanceID DESC
-                             LIMIT 1";
+                             ";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@sid", studentID);
@@ -298,11 +406,10 @@ namespace QR_Generator_Test_C_
                 db.OpenConnection();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read())
+                while (reader.Read())
                 {
                     dataGridView1.Rows.Add(
-                        reader["AttendanceID"].ToString(),
-                        reader["Student_ID"].ToString(),
+                        FormatStudentID(reader["Student_ID"].ToString()),
                         reader["Student_Name"].ToString(),
                         reader["Event_ID"].ToString(),
                         reader["TimeIn"].ToString(),
@@ -519,5 +626,44 @@ namespace QR_Generator_Test_C_
         {
 
         }
+
+        private DataGridViewRow FindAttendanceRow(string studentID)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                if (row.Cells["Student_ID"].Value?.ToString() == FormatStudentID(studentID))
+                    return row;
+            }
+            return null;
+        }
+        private void UpdateAttendanceDGV(string studentID, string studentName)
+        {
+            string formattedID = FormatStudentID(studentID);
+            DateTime now = DateTime.Now;
+
+            DataGridViewRow existingRow = FindAttendanceRow(studentID);
+
+            if (existingRow == null)
+            {
+                // TIME-IN → ADD ROW
+                dataGridView1.Rows.Add(
+                    formattedID,
+                    studentName,
+                    eventID,
+                    now,          // TimeIn
+                    null,         // TimeOut
+                    now.Date
+                );
+            }
+            else
+            {
+                // TIME-OUT → UPDATE ROW
+                existingRow.Cells["TimeOut"].Value = now;
+            }
+        }
+
+
     }
 }

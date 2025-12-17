@@ -3,51 +3,51 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\start_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\start_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\start_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\start_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\start_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\event_page.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\admin_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\create_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\create_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\create_admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\createeventclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\createeventclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\createeventclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\profile_info.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\profile_info.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\profile_info.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -66,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +82,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Event_page.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Event_page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Event_page.cs",
@@ -95,19 +95,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Admin_Event.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Admin_Event.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Admin_Event.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Admin_Event.cs [Design]",
               "RelativeToolTip": "QR_Generator_Test_C#\\Admin_Event.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:10:37.353Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-17T04:10:37.353Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Start_Page.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Start_Page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Start_Page.cs",
@@ -120,7 +119,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Dashboard.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Dashboard.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Dashboard.cs",
@@ -132,7 +131,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "Event_page.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Event_page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Event_page.cs",
@@ -144,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Start_Page.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Start_Page.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\Start_Page.cs",
@@ -164,8 +163,7 @@
               "RelativeToolTip": "QR_Generator_Test_C#\\Admin_Event.cs",
               "ViewState": "AQIAABQAAAAAAAAAAAAawCQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:17:51.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T04:17:51.458Z"
             },
             {
               "$type": "Document",
@@ -177,8 +175,7 @@
               "RelativeToolTip": "QR_Generator_Test_C#\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:04:09.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T04:04:09.792Z"
             },
             {
               "$type": "Document",
@@ -202,8 +199,7 @@
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\Create_Admin.cs [Design]",
               "RelativeToolTip": "QR_Generator_Test_C#\\Create_Admin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:10:43.133Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-17T04:10:43.133Z"
             },
             {
               "$type": "Document",
@@ -215,8 +211,7 @@
               "RelativeToolTip": "QR_Generator_Test_C#\\createEventClass.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:01:51.2Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T04:01:51.2Z"
             },
             {
               "$type": "Document",
@@ -228,8 +223,7 @@
               "RelativeToolTip": "QR_Generator_Test_C#\\Profile_Info.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-17T04:00:38.154Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-17T04:00:38.154Z"
             },
             {
               "$type": "Document",
@@ -240,8 +234,7 @@
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\User_Event.cs [Design]",
               "RelativeToolTip": "QR_Generator_Test_C#\\User_Event.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:17:54.66Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-12-05T17:17:54.66Z"
             },
             {
               "$type": "Document",
@@ -253,8 +246,7 @@
               "RelativeToolTip": "QR_Generator_Test_C#\\User_Event.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAcwCgAAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T17:19:10.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-05T17:19:10.574Z"
             }
           ]
         }

@@ -2,12 +2,16 @@
 using System.Drawing;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Net.WebRequestMethods;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 namespace QR_Generator_Test_C_
 {
     public partial class LoginForm : Form
     {
         string userPhoneNumber;
+        private OTP otpService = new OTP();
+        private Timer otpTimer;
+        private int countdown = 30; // 30 seconds
 
         public LoginForm()
         {
@@ -286,8 +290,28 @@ namespace QR_Generator_Test_C_
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // 1️⃣ Empty check
+            if (string.IsNullOrWhiteSpace(loginUser.Text) ||
+                string.IsNullOrWhiteSpace(loginPass.Text) ||
+                string.IsNullOrWhiteSpace(loginOTP.Text))
+            {
+                MessageBox.Show("Please complete the form");
+                loginUser.Clear();
+                loginPass.Clear();
+                loginOTP.Clear();
+                return;
+            }
 
-            // Populate Profile_Info AFTER successful login
+            // 2️⃣ Validate OTP
+            if (!otpService.Validate(loginOTP.Text))
+            {
+                MessageBox.Show("Invalid OTP");
+                loginUser.Clear();
+                loginPass.Clear();
+                loginOTP.Clear();
+                return;
+            }
+
             Profile_Info.Instance.setUsername(accUsername());
             Profile_Info.Instance.setSection(accSection());
             Profile_Info.Instance.setContactNum(accNum());
@@ -295,23 +319,13 @@ namespace QR_Generator_Test_C_
             Profile_Info.Instance.setSex(accSex());
             Profile_Info.Instance.setRole(accRole());
 
-            if (string.IsNullOrEmpty(loginUser.Text) || string.IsNullOrEmpty(loginPass.Text))
-            {
-                MessageBox.Show("Please Complete the Form");
-            }
-            else
-            {
-                // Login successful, show dashboard
-                Dashboard dashboard = new Dashboard();
-                dashboard.Show();
-                this.Hide();
-            }
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
 
-            // Clear input fields
-            loginUser.Clear();
-            loginPass.Clear();
-            loginOTP.Clear();
+            
         }
+
 
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -360,11 +374,18 @@ namespace QR_Generator_Test_C_
             return contactNum;
         }
 
+        
+
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            string otp = otpService.Generate();
+            MessageBox.Show("Your OTP is: " + otp);  // <- THIS BLOCKS THE UI
+            btnSendOTP.Enabled = false;
+            countdown = 30;
+            btnSendOTP.ForeColor = Color.White;
+            btnSendOTP.Text = $"Wait {countdown}s";
+            otpTimer.Start();
         }
-
 
         public String getUsername()
         {
@@ -441,13 +462,31 @@ namespace QR_Generator_Test_C_
             radioButton2.Checked = false;
         }
 
+        private void OtpTimer_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+
+            btnSendOTP.Text = $"Wait {countdown}s";
+
+            if (countdown <= 0)
+            {
+                otpTimer.Stop();
+                btnSendOTP.Enabled = true;
+                btnSendOTP.Text = "Send OTP";
+                countdown = 30; // reset countdown
+            }
+        }
 
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            otpTimer = new Timer();
+            otpTimer.Interval = 1000; // 1 second
+            otpTimer.Tick += OtpTimer_Tick;
             TB_Password.PasswordChar = '*';
             loginPass.PasswordChar = '*';
         }
+
 
         private void TB_Contact_TextChanged(object sender, EventArgs e)
         {
