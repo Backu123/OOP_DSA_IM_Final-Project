@@ -10,6 +10,9 @@ namespace QR_Generator_Test_C_
     {
         string userPhoneNumber;
         private OTP otpService = new OTP();
+        private Timer otpTimer;
+        private int countdown = 30; // 30 seconds
+
         public LoginForm()
         {
             InitializeComponent();
@@ -371,14 +374,18 @@ namespace QR_Generator_Test_C_
             return contactNum;
         }
 
+        
+
         private void button3_Click(object sender, EventArgs e)
         {
             string otp = otpService.Generate();
-
-            MessageBox.Show("Your OTP is: " + otp);
+            MessageBox.Show("Your OTP is: " + otp);  // <- THIS BLOCKS THE UI
+            btnSendOTP.Enabled = false;
+            countdown = 30;
+            btnSendOTP.ForeColor = Color.White;
+            btnSendOTP.Text = $"Wait {countdown}s";
+            otpTimer.Start();
         }
-
-
 
         public String getUsername()
         {
@@ -455,13 +462,31 @@ namespace QR_Generator_Test_C_
             radioButton2.Checked = false;
         }
 
+        private void OtpTimer_Tick(object sender, EventArgs e)
+        {
+            countdown--;
+
+            btnSendOTP.Text = $"Wait {countdown}s";
+
+            if (countdown <= 0)
+            {
+                otpTimer.Stop();
+                btnSendOTP.Enabled = true;
+                btnSendOTP.Text = "Send OTP";
+                countdown = 30; // reset countdown
+            }
+        }
 
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            otpTimer = new Timer();
+            otpTimer.Interval = 1000; // 1 second
+            otpTimer.Tick += OtpTimer_Tick;
             TB_Password.PasswordChar = '*';
             loginPass.PasswordChar = '*';
         }
+
 
         private void TB_Contact_TextChanged(object sender, EventArgs e)
         {

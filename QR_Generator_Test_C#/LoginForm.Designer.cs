@@ -52,7 +52,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.TB_Username = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -60,6 +59,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TB_Section = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -108,7 +108,7 @@
             this.loginOTP.Multiline = true;
             this.loginOTP.Name = "loginOTP";
             this.loginOTP.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loginOTP.Size = new System.Drawing.Size(172, 25);
+            this.loginOTP.Size = new System.Drawing.Size(118, 25);
             this.loginOTP.TabIndex = 22;
             this.loginOTP.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.loginOTP.Enter += new System.EventHandler(this.textBox1_Enter);
@@ -163,9 +163,9 @@
             this.btnSendOTP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSendOTP.Font = new System.Drawing.Font("Microsoft JhengHei UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSendOTP.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSendOTP.Location = new System.Drawing.Point(984, 402);
+            this.btnSendOTP.Location = new System.Drawing.Point(937, 390);
             this.btnSendOTP.Name = "btnSendOTP";
-            this.btnSendOTP.Size = new System.Drawing.Size(87, 25);
+            this.btnSendOTP.Size = new System.Drawing.Size(140, 38);
             this.btnSendOTP.TabIndex = 24;
             this.btnSendOTP.Text = "Send OTP";
             this.btnSendOTP.UseVisualStyleBackColor = false;
@@ -377,13 +377,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // panel3
-            // 
-            this.panel3.Location = new System.Drawing.Point(806, 426);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(172, 1);
-            this.panel3.TabIndex = 30;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -444,6 +437,13 @@
             this.TB_Section.TabIndex = 9;
             this.TB_Section.Enter += new System.EventHandler(this.TB_Section_Enter);
             this.TB_Section.Leave += new System.EventHandler(this.TB_Section_Leave);
+            // 
+            // panel3
+            // 
+            this.panel3.Location = new System.Drawing.Point(806, 426);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(125, 1);
+            this.panel3.TabIndex = 30;
             // 
             // LoginForm
             // 
@@ -523,7 +523,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox TB_Username;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
@@ -531,5 +530,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox TB_Section;
+        private System.Windows.Forms.Panel panel3;
     }
 }

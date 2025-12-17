@@ -191,6 +191,7 @@
       <DependentUpon>Event_page.cs</DependentUpon>
     </Compile>
     <Compile Include="OTP.cs" />
+    <Compile Include="OTPSMS.cs" />
     <Compile Include="Pro.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
