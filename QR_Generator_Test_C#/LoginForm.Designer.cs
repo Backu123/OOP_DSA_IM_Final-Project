@@ -177,9 +177,8 @@
             this.loginPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.loginPass.Location = new System.Drawing.Point(806, 337);
             this.loginPass.Name = "loginPass";
-            this.loginPass.Size = new System.Drawing.Size(265, 23);
             this.loginPass.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.loginPass.Size = new System.Drawing.Size(265, 25);
+            this.loginPass.Size = new System.Drawing.Size(265, 23);
             this.loginPass.TabIndex = 3;
             this.loginPass.TextChanged += new System.EventHandler(this.loginPass_TextChanged);
             this.loginPass.Enter += new System.EventHandler(this.loginPass_Enter);
@@ -212,7 +211,7 @@
             this.TB_Password.Location = new System.Drawing.Point(144, 439);
             this.TB_Password.Multiline = true;
             this.TB_Password.Name = "TB_Password";
-            this.TB_Password.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.TB_Password.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.TB_Password.Size = new System.Drawing.Size(309, 25);
             this.TB_Password.TabIndex = 13;
             this.TB_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
