@@ -9,7 +9,7 @@ namespace QR_Generator_Test_C_
     public partial class LoginForm : Form
     {
         string userPhoneNumber;
-        private SimpleOTP otpService = new SimpleOTP();
+        private OTP otpService = new OTP();
         public LoginForm()
         {
             InitializeComponent();

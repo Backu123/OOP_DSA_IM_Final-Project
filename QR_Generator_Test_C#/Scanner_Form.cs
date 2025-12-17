@@ -365,6 +365,9 @@ namespace QR_Generator_Test_C_
 
                     // Load last attendance to show in DataGridView
                     LoadLastAttendance(studentID);
+                    // Load last attendance to show in DataGridView
+                    UpdateAttendanceDGV(studentID, studentName);
+
                 }
                 else
                 {
@@ -385,14 +388,15 @@ namespace QR_Generator_Test_C_
 
         private void LoadLastAttendance(string studentID)
         {
-            /*DB db = new DB();
+            /*dataGridView1.Rows.Clear();
+            DB db = new DB();
             MySqlConnection conn = db.GetConnection();
 
             string query = @"SELECT AttendanceID, Student_ID, Student_Name, Event_ID, TimeIn, TimeOut, ScanDate
                              FROM attendance
                              WHERE Student_ID = @sid
                              ORDER BY AttendanceID DESC
-                             LIMIT 1";
+                             ";
 
             MySqlCommand cmd = new MySqlCommand(query, conn);
             cmd.Parameters.AddWithValue("@sid", studentID);
@@ -402,11 +406,10 @@ namespace QR_Generator_Test_C_
                 db.OpenConnection();
                 MySqlDataReader reader = cmd.ExecuteReader();
 
-                if (reader.Read())
+                while (reader.Read())
                 {
                     dataGridView1.Rows.Add(
-                        reader["AttendanceID"].ToString(),
-                        reader["Student_ID"].ToString(),
+                        FormatStudentID(reader["Student_ID"].ToString()),
                         reader["Student_Name"].ToString(),
                         reader["Event_ID"].ToString(),
                         reader["TimeIn"].ToString(),
@@ -623,5 +626,44 @@ namespace QR_Generator_Test_C_
         {
 
         }
+
+        private DataGridViewRow FindAttendanceRow(string studentID)
+        {
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                if (row.Cells["Student_ID"].Value?.ToString() == FormatStudentID(studentID))
+                    return row;
+            }
+            return null;
+        }
+        private void UpdateAttendanceDGV(string studentID, string studentName)
+        {
+            string formattedID = FormatStudentID(studentID);
+            DateTime now = DateTime.Now;
+
+            DataGridViewRow existingRow = FindAttendanceRow(studentID);
+
+            if (existingRow == null)
+            {
+                // TIME-IN → ADD ROW
+                dataGridView1.Rows.Add(
+                    formattedID,
+                    studentName,
+                    eventID,
+                    now,          // TimeIn
+                    null,         // TimeOut
+                    now.Date
+                );
+            }
+            else
+            {
+                // TIME-OUT → UPDATE ROW
+                existingRow.Cells["TimeOut"].Value = now;
+            }
+        }
+
+
     }
 }
