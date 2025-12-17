@@ -30,5 +30,8 @@ namespace QR_Generator_Test_C_
             dashboard.Show();
             this.Hide();
         }
+        private void Start_Page_Load(object sender, EventArgs e)
+        {
+        }
     }
 }

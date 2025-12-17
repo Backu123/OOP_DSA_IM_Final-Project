@@ -51,7 +51,7 @@ namespace QR_Generator_Test_C_
                 label1.Text = "Join An Event Now!";
                 createEventToolStripMenuItem.Visible = false;
                 createAdminMenuItem.Visible = false;
-                createAdminMenuItem.Visible = false;
+                adminCreate.Visible = false;
             }
 
             DB db = new DB();
