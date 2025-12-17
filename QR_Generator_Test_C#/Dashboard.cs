@@ -48,6 +48,7 @@ namespace QR_Generator_Test_C_
             }
             else
             {
+                label1.Text = "Join An Event Now!";
                 createEventToolStripMenuItem.Visible = false;
                 createAdminMenuItem.Visible = false;
             }
@@ -183,6 +184,22 @@ namespace QR_Generator_Test_C_
         private void label2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            if (Profile_Info.Instance.getRole() == "Admin")
+            {
+                Admin_Event admin_Event = new Admin_Event();
+                admin_Event.Show();
+                this.Hide();
+            }
+            else
+            {
+                Event_page event_Page = new Event_page();
+                event_Page.Show();
+                this.Hide();
+            }
         }
     }
 }

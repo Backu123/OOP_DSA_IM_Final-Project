@@ -48,7 +48,7 @@
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
             this.exitToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(420, 28);
+            this.menuStrip1.Location = new System.Drawing.Point(403, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
             this.menuStrip1.Size = new System.Drawing.Size(460, 31);
@@ -147,6 +147,7 @@
             this.button1.Size = new System.Drawing.Size(290, 92);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // label1
             // 
