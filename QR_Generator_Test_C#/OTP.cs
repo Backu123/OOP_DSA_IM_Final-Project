@@ -24,9 +24,6 @@ namespace QR_Generator_Test_C_
             return otp.ValidateOTP(input);
         }
     }
-
-    // OOP CLASS
-
     // ABSTRACTION
     abstract class OTPBase
     {
