@@ -50,6 +50,7 @@ namespace QR_Generator_Test_C_
             {
                 createEventToolStripMenuItem.Visible = false;
                 createAdminMenuItem.Visible = false;
+                createAdminMenuItem.Visible = false;
             }
 
             DB db = new DB();

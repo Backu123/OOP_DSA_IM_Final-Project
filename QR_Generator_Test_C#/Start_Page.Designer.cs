@@ -38,10 +38,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Start_Page";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start_Page";
+            this.Load += new System.EventHandler(this.Start_Page_Load);
+            this.Click += new System.EventHandler(this.Start_Page_Click);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Start_Page_KeyDown);
             this.ResumeLayout(false);
 
         }

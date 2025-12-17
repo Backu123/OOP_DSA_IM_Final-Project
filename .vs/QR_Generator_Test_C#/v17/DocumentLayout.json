@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|solutionrelative:qr_generator_test_c#\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15DAE10A-0243-4725-B9D9-393E36501F05}|QR_Generator_Test_C#\\QR_Generator_Test_C#.csproj|c:\\users\\asus\\documents\\oop_dsa_proj\\oop_dsa_im_final-project\\qr_generator_test_c#\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -146,7 +146,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
@@ -230,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\LoginForm.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\LoginForm.cs",
@@ -242,13 +242,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\LoginForm.cs",
               "RelativeDocumentMoniker": "QR_Generator_Test_C#\\LoginForm.cs",
               "ToolTip": "C:\\Users\\ASUS\\Documents\\OOP_DSA_Proj\\OOP_DSA_IM_Final-Project\\QR_Generator_Test_C#\\LoginForm.cs",
               "RelativeToolTip": "QR_Generator_Test_C#\\LoginForm.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAAAA0AAAAiAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH8BAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-16T23:35:29.487Z",
               "EditorCaption": ""

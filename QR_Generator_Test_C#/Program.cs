@@ -16,7 +16,7 @@ namespace QR_Generator_Test_C_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new Start_Page());
         }
     }
 }
