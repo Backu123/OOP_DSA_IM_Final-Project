@@ -68,8 +68,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Haettenschweiler", 30F);
-            this.label1.Location = new System.Drawing.Point(176, 6);
+            this.label1.Font = new System.Drawing.Font("Haettenschweiler", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(170, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 52);
             this.label1.TabIndex = 0;
@@ -101,7 +101,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Haettenschweiler", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(187, 7);
+            this.label2.Location = new System.Drawing.Point(176, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 52);
             this.label2.TabIndex = 1;
@@ -132,7 +132,6 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(187, 52);
             this.button2.TabIndex = 3;
-            this.button2.Text = "Download as PDF";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -141,7 +140,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

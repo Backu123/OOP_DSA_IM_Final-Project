@@ -117,5 +117,22 @@ namespace QR_Generator_Test_C_
                 label6.Enabled = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Dashboard dashboard = new Dashboard();
+            dashboard.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
