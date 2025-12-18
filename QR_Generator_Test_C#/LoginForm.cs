@@ -17,7 +17,6 @@ namespace QR_Generator_Test_C_
         {
             InitializeComponent();
         }
-
         public String accUsername()
         {
             DB db = new DB();
@@ -50,7 +49,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         public String accSection()
         {
             DB db = new DB();
@@ -83,7 +81,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         public long accNum()
         {
             DB db = new DB();
@@ -116,7 +113,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         public String accPassword()
         {
             DB db = new DB();
@@ -149,7 +145,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         public String accSex()
         {
             DB db = new DB();
@@ -182,7 +177,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         public String accRole()
         {
             DB db = new DB();
@@ -215,7 +209,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
@@ -228,7 +221,6 @@ namespace QR_Generator_Test_C_
         {
 
         }
-
         public bool UserExist()
         {
             DB db = new DB();
@@ -255,7 +247,6 @@ namespace QR_Generator_Test_C_
             }
 
         }
-
         private bool ValidateLogin(string username, string password)
         {
             DB db = new DB();
@@ -286,8 +277,6 @@ namespace QR_Generator_Test_C_
                 db.CloseConnection();
             }
         }
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             // 1️⃣ Empty check
@@ -330,22 +319,18 @@ namespace QR_Generator_Test_C_
            
             this.Hide();
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
-
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
-
         private String GetUserPhone(string username)
         {
             string contactNum = "";
@@ -376,9 +361,6 @@ namespace QR_Generator_Test_C_
             }
             return contactNum;
         }
-
-        
-
         private void button3_Click(object sender, EventArgs e)
         {
             string otp = otpService.Generate();
@@ -389,12 +371,10 @@ namespace QR_Generator_Test_C_
             btnSendOTP.Text = $"Wait {countdown}s";
             otpTimer.Start();
         }
-
         public String getUsername()
         {
             return loginUser.Text;
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(TB_Username.Text) ||
@@ -464,7 +444,6 @@ namespace QR_Generator_Test_C_
             radioButton1.Checked = false;
             radioButton2.Checked = false;
         }
-
         private void OtpTimer_Tick(object sender, EventArgs e)
         {
             countdown--;
@@ -479,8 +458,6 @@ namespace QR_Generator_Test_C_
                 countdown = 30; // reset countdown
             }
         }
-
-
         private void LoginForm_Load(object sender, EventArgs e)
         {
             button2.FlatAppearance.BorderSize = 0;
@@ -492,88 +469,70 @@ namespace QR_Generator_Test_C_
             TB_Password.PasswordChar = '*';
             loginPass.PasswordChar = '*';
         }
-
-
         private void TB_Contact_TextChanged(object sender, EventArgs e)
         {
         }
-
         private void TB_Contact_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TB_Contact.Text))
                 TB_Contact.Text = "09";
         }
-
         private void TB_Username_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
 
         }
-
         private void TB_Section_TextChanged(object sender, EventArgs e)
         {
             label6.ForeColor = Color.Orange;
         }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void label10_Click(object sender, EventArgs e)
         {
 
         }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }
-
         private void loginUser_MouseDown(object sender, MouseEventArgs e)
         {
             label1.ForeColor = Color.Orange;
         }
-
         private void loginUser_Leave(object sender, EventArgs e)
         {
             label1.ForeColor = Color.DarkGray;
         }
-
         private void loginPass_MouseDown(object sender, MouseEventArgs e)
         {
             label2.ForeColor = Color.Orange;
         }
-
         private void loginPass_Leave(object sender, EventArgs e)
         {
             label2.ForeColor = Color.DarkGray;
         }
-
         private void loginPass_TextChanged(object sender, EventArgs e)
         {
 
         }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             label11.ForeColor = Color.Orange;
         }
-
         private void textBox1_MouseDown(object sender, MouseEventArgs e)
         {
             label11.ForeColor = Color.Orange;
         }
-
         private void textBox1_MouseLeave(object sender, EventArgs e)
         {
             label11.ForeColor = Color.Gray;
         }
-
         private void TB_Username_MouseDown(object sender, MouseEventArgs e)
         {
             label5.ForeColor = Color.Orange;

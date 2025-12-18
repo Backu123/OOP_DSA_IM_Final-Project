@@ -20,7 +20,6 @@ namespace QR_Generator_Test_C_
 
         private void User_Event_Load(object sender, EventArgs e)
         {
-
             string data = Profile_Info.Instance.getContactNum().ToString();
 
             if (string.IsNullOrEmpty(data))
