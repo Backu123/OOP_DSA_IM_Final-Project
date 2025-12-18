@@ -294,5 +294,152 @@ namespace QR_Generator_Test_C_ {
         {
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedIndex == 0)
+            {
+                flowEventsPanel.Controls.Clear();
+                CenterPanel();
+                flowEventsPanel.AutoScroll = true;
+                flowEventsPanel.WrapContents = true;
+                Back.FlatAppearance.BorderSize = 0;
+                Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.BorderSize = 0;
+                createEventButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                DB db = new DB();
+                string query = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventEndDate, EventSetting FROM events WHERE created_by = @username";
+                using (MySqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", Profile_Info.Instance.getUsername());
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventID = reader["EventID"].ToString();
+                        string eventTitle = reader["EventTitle"].ToString();
+                        string eventDesc = reader["EventDesc"].ToString();
+                        string eventCategory = reader["EventCategory"].ToString();
+                        DateTime startDate = (DateTime)reader["EventDate"];
+                        DateTime endDate = (DateTime)reader["EventEndDate"];
+                        string eventSetting = reader["EventSetting"].ToString();
+
+                        AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, startDate, endDate, eventSetting);
+                    }
+                    conn.Close();
+                }
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                flowEventsPanel.Controls.Clear();
+                CenterPanel();
+                flowEventsPanel.AutoScroll = true;
+                flowEventsPanel.WrapContents = true;
+                Back.FlatAppearance.BorderSize = 0;
+                Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.BorderSize = 0;
+                createEventButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                DB db = new DB();
+                string query = @"SELECT * FROM events WHERE NOW() < EventDate";
+                using (MySqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", Profile_Info.Instance.getUsername());
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventID = reader["EventID"].ToString();
+                        string eventTitle = reader["EventTitle"].ToString();
+                        string eventDesc = reader["EventDesc"].ToString();
+                        string eventCategory = reader["EventCategory"].ToString();
+                        DateTime startDate = (DateTime)reader["EventDate"];
+                        DateTime endDate = (DateTime)reader["EventEndDate"];
+                        string eventSetting = reader["EventSetting"].ToString();
+
+                        AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, startDate, endDate, eventSetting);
+                    }
+                    conn.Close();
+                }
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                flowEventsPanel.Controls.Clear();
+                CenterPanel();
+                flowEventsPanel.AutoScroll = true;
+                flowEventsPanel.WrapContents = true;
+                Back.FlatAppearance.BorderSize = 0;
+                Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.BorderSize = 0;
+                createEventButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                DB db = new DB();
+                string query = @"SElECT * FROM events WHERE NOW() BETWEEN EventDate AND EventEndDate";
+                using (MySqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@username", Profile_Info.Instance.getUsername());
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventID = reader["EventID"].ToString();
+                        string eventTitle = reader["EventTitle"].ToString();
+                        string eventDesc = reader["EventDesc"].ToString();
+                        string eventCategory = reader["EventCategory"].ToString();
+                        DateTime startDate = (DateTime)reader["EventDate"];
+                        DateTime endDate = (DateTime)reader["EventEndDate"];
+                        string eventSetting = reader["EventSetting"].ToString();
+
+                        AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, startDate, endDate, eventSetting);
+                    }
+                    conn.Close();
+                }
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                flowEventsPanel.Controls.Clear();
+                CenterPanel();
+                flowEventsPanel.AutoScroll = true;
+                flowEventsPanel.WrapContents = true;
+                Back.FlatAppearance.BorderSize = 0;
+                Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.BorderSize = 0;
+                createEventButton.FlatAppearance.MouseOverBackColor = Color.Transparent;
+                createEventButton.FlatAppearance.MouseDownBackColor = Color.Transparent;
+                DB db = new DB();
+                string query = @"select * from events where NOW() > EventEndDate";
+                using (MySqlConnection conn = db.GetConnection())
+                {
+                    conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, conn);
+                    MySqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        string eventID = reader["EventID"].ToString();
+                        string eventTitle = reader["EventTitle"].ToString();
+                        string eventDesc = reader["EventDesc"].ToString();
+                        string eventCategory = reader["EventCategory"].ToString();
+                        DateTime startDate = (DateTime)reader["EventDate"];
+                        DateTime endDate = (DateTime)reader["EventEndDate"];
+                        string eventSetting = reader["EventSetting"].ToString();
+
+                        AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, startDate, endDate, eventSetting);
+                    }
+                    conn.Close();
+                }
+            }
+        }
     }
 }

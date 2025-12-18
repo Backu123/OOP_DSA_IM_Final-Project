@@ -311,22 +311,25 @@ namespace QR_Generator_Test_C_
                 loginOTP.Clear();
                 return;
             }
+            if (UserExist())
+            {
+                Profile_Info.Instance.setUsername(accUsername());
+                Profile_Info.Instance.setSection(accSection());
+                Profile_Info.Instance.setContactNum(accNum());
+                Profile_Info.Instance.setPassword(accPassword());
+                Profile_Info.Instance.setSex(accSex());
+                Profile_Info.Instance.setRole(accRole());
 
-            Profile_Info.Instance.setUsername(accUsername());
-            Profile_Info.Instance.setSection(accSection());
-            Profile_Info.Instance.setContactNum(accNum());
-            Profile_Info.Instance.setPassword(accPassword());
-            Profile_Info.Instance.setSex(accSex());
-            Profile_Info.Instance.setRole(accRole());
-
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
+                Dashboard dashboard = new Dashboard();
+                dashboard.Show();
+            }
+            else
+            {
+                MessageBox.Show("User doesn't exist.");
+            }
+           
             this.Hide();
-
-            
         }
-
-
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -33,6 +33,7 @@
             this.createEventButton = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // flowEventsPanel
@@ -89,6 +90,23 @@
             this.mainPanel.TabIndex = 3;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 25;
+            this.comboBox1.Items.AddRange(new object[] {
+            "All",
+            "Upcoming",
+            "Ongoing",
+            "Ended"});
+            this.comboBox1.Location = new System.Drawing.Point(624, 55);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(378, 33);
+            this.comboBox1.TabIndex = 50;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Admin_Event
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -96,6 +114,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.createEventButton);
             this.Controls.Add(this.flowEventsPanel);
@@ -115,5 +134,6 @@
         private System.Windows.Forms.Button createEventButton;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Panel mainPanel;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
