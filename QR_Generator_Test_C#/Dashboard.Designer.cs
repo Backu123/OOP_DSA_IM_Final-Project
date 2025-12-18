@@ -48,12 +48,12 @@
             this.qRGeneratingToolStripMenuItem,
             this.profileToolStripMenuItem,
             this.logoutToolStripMenuItem,
-            this.exitToolStripMenuItem,
-            this.adminCreate});
+            this.adminCreate,
+            this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(403, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(568, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(474, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -126,9 +126,10 @@
             // 
             // adminCreate
             // 
+            this.adminCreate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("adminCreate.BackgroundImage")));
+            this.adminCreate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.adminCreate.Name = "adminCreate";
-            this.adminCreate.Size = new System.Drawing.Size(108, 27);
-            this.adminCreate.Text = "adminCreate";
+            this.adminCreate.Size = new System.Drawing.Size(14, 27);
             this.adminCreate.Click += new System.EventHandler(this.adminCreate_Click);
             // 
             // createAdminMenuItem

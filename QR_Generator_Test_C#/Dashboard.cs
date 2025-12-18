@@ -40,12 +40,13 @@ namespace QR_Generator_Test_C_
         private void Dashboard_Load(object sender, EventArgs e)
         {
             qRGeneratingToolStripMenuItem.Visible = false;
-            
             if (Profile_Info.Instance.getRole() == "Admin")
             {
                 createEventToolStripMenuItem.Visible = true;    
                 createAdminMenuItem.Visible = true;
                 eventsToolStripMenuItem.Visible = false;
+                createAdminMenuItem.AutoSize = false;
+                createAdminMenuItem.Width = 63;
             }
             else
             {
