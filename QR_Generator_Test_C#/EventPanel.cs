@@ -163,6 +163,13 @@ namespace QR_Generator_Test_C_
             AbsentDGV.Columns["Student_Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             AbsentDGV.Columns["Student_ID"].Width = 90;
 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+
             DB db = new DB();
             MySqlConnection conn = db.GetConnection();
             try

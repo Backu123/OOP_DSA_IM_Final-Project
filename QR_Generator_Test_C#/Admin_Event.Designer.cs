@@ -73,7 +73,7 @@
             this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Back.FlatAppearance.BorderSize = 0;
             this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Location = new System.Drawing.Point(37, 49);
+            this.Back.Location = new System.Drawing.Point(47, 51);
             this.Back.Name = "Back";
             this.Back.Size = new System.Drawing.Size(60, 45);
             this.Back.TabIndex = 2;

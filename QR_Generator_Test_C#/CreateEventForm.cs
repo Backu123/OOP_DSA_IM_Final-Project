@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Twilio.TwiML.Voice;
 
 namespace QR_Generator_Test_C_
 {
@@ -36,7 +37,9 @@ namespace QR_Generator_Test_C_
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime selected = dateTimePicker1.Value;
+            DateTime selected = dateTimePickerStart.Value;
+            DateTime start = dateTimePickerStart.Value;
+            DateTime end = dateTimePickerEnd.Value;
             DateTime now = DateTime.Now;
             // renamed TB_Title
             if (string.IsNullOrEmpty(TB_ID.Text) || string.IsNullOrEmpty(TB_Title.Text) || string.IsNullOrEmpty(TB_Desc.Text) || string.IsNullOrEmpty(CB_Category.Text) || string.IsNullOrEmpty(CB_Settings.Text))
@@ -47,6 +50,14 @@ namespace QR_Generator_Test_C_
             {
                 MessageBox.Show("Cannot pick past dates.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            else if (start < now)
+            {
+                MessageBox.Show("Start date cannot be in the past.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if ((end - start).TotalMinutes < 30)
+            {
+                MessageBox.Show("End date must be at least 30 minutes after start date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             else
             {
                 createEventClass createEventClass = new createEventClass();
@@ -54,7 +65,8 @@ namespace QR_Generator_Test_C_
                 createEventClass.setEventTitle(TB_Title.Text);
                 createEventClass.setEventDesc(TB_Desc.Text);
                 createEventClass.setEventCategory(CB_Category.Text);
-                createEventClass.setEventDuration(dateTimePicker1.Value);
+                createEventClass.setEventStartDate(dateTimePickerStart.Value);
+                createEventClass.setEventEndDate(dateTimePickerEnd.Value);
                 createEventClass.setEventSetting(CB_Settings.Text);
 
                 createEventClass.InsertEvent(
@@ -62,19 +74,25 @@ namespace QR_Generator_Test_C_
                     createEventClass.getEventTitle(),
                     createEventClass.getEventDesc(),
                     createEventClass.getEventCategory(),
-                    createEventClass.getEventDuration(),
+                    createEventClass.getEventStartDate(),
+                    createEventClass.getEventEndDate(),
                     createEventClass.getEventSetting()
-                    );
+                );
 
                 admin.AddEventPanel(
                     createEventClass.getEventID(),
                     createEventClass.getEventTitle(),
                     createEventClass.getEventDesc(),
                     createEventClass.getEventCategory(),
-                    createEventClass.getEventDuration(),
+                    createEventClass.getEventStartDate(),
+                    createEventClass.getEventEndDate(),
                     createEventClass.getEventSetting()
-                    );
+                );
+
+                Admin_Event admin_Event = new Admin_Event();
+                admin_Event.Show();
                 this.Hide();
+
             }
         }
 
@@ -97,8 +115,46 @@ namespace QR_Generator_Test_C_
         {
             TB_ID.Text = GenerateEventID();
             TB_ID.Enabled = false;
-            dateTimePicker1.CustomFormat = "MMMM-dd-yyyy hh:mm tt";
-            dateTimePicker1.MinDate = DateTime.Now;
+
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+
+            // DateTimePickers format
+            dateTimePickerStart.Format = DateTimePickerFormat.Custom;
+            dateTimePickerStart.CustomFormat = "dd/MM/yyyy hh:mm tt";
+
+            dateTimePickerEnd.Format = DateTimePickerFormat.Custom;
+            dateTimePickerEnd.CustomFormat = "dd/MM/yyyy hh:mm tt";
+
+            // Prevent start date in the past
+            dateTimePickerStart.MinDate = DateTime.Now;
+
+            // Set initial end date to 30 minutes after start
+            dateTimePickerEnd.Value = dateTimePickerStart.Value.AddMinutes(30);
+            dateTimePickerEnd.MinDate = dateTimePickerStart.Value.AddMinutes(30);
+        }
+
+
+        private void dateTimePickerStart_ValueChanged(object sender, EventArgs e)
+        {
+            // End date cannot be before start date + 30 mins
+            DateTime minEnd = dateTimePickerStart.Value.AddMinutes(30);
+            dateTimePickerEnd.MinDate = minEnd;
+
+            // Automatically adjust end date if it's too early
+            if (dateTimePickerEnd.Value < minEnd)
+            {
+                dateTimePickerEnd.Value = minEnd;
+            }
+        }
+
+
+        private void dateTimePickerEnd_ValueChanged(object sender, EventArgs e)
+        {
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

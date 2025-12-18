@@ -184,6 +184,7 @@
     <Compile Include="Create_Admin.Designer.cs">
       <DependentUpon>Create_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="EventInfo.cs" />
     <Compile Include="Event_page.cs">
       <SubType>Form</SubType>
     </Compile>

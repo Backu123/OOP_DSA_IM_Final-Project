@@ -62,15 +62,18 @@ namespace QR_Generator_Test_C_
 
             return (result == DialogResult.OK) ? textBox.Text : null;
         }
-
-        public void AddEventPanel(string ID, string title, string desc, string category, DateTime date, string setting)
+        public void AddEventPanel(string ID,string title,string desc,string category,DateTime startDate,DateTime endDate,string setting)
         {
             Panel eventPanel = new Panel();
             eventPanel.Width = 800;
             eventPanel.Height = 125;
             eventPanel.BorderStyle = BorderStyle.FixedSingle;
-            eventPanel.BackColor = Color.LightBlue;
+
+            // ✅ SAME background as Event_page
+            eventPanel.BackColor = Color.LightCoral;
             eventPanel.Margin = new Padding(10);
+
+            // ===== SAME POSITIONS AS Event_page =====
 
             Label lbID = new Label();
             lbID.Text = "Event ID: " + ID;
@@ -93,8 +96,9 @@ namespace QR_Generator_Test_C_
             lblCategory.Location = new Point(450, 45);
             lblCategory.AutoSize = true;
 
+            // DATE (From - To)
             Label lblDate = new Label();
-            lblDate.Text = "Date: " + date;
+            lblDate.Text = $"{startDate:MMM dd, yyyy hh:mm tt} - {endDate:MMM dd, yyyy hh:mm tt}";
             lblDate.Location = new Point(20, 70);
             lblDate.AutoSize = true;
 
@@ -103,53 +107,156 @@ namespace QR_Generator_Test_C_
             lblLocation.Location = new Point(450, 70);
             lblLocation.AutoSize = true;
 
+            string status = GetEventStatus(startDate, endDate);
+
+            Label lblStatus = new Label();
+            lblStatus.Text = status;
+            lblStatus.Location = new Point(680, 15);
+            lblStatus.Font = new Font("Segoe UI", 9, FontStyle.Bold);
+            lblStatus.AutoSize = false; // Important for custom painting
+            lblStatus.Width = 80;
+            lblStatus.Height = 25;
+            lblStatus.TextAlign = ContentAlignment.MiddleCenter;
+
+            // Set a background color according to status
+            Color bgColor;
+
+            switch (status)
+            {
+                case "Upcoming":
+                    bgColor = Color.DodgerBlue;
+                    break;
+                case "Ongoing":
+                    bgColor = Color.Green;
+                    break;
+                case "Ended":
+                    bgColor = Color.Red;
+                    break;
+                default:
+                    bgColor = Color.Gray;
+                    break;
+            }
+
+            lblStatus.Tag = bgColor; // store color for Paint event
+            lblStatus.ForeColor = Color.White;
+
+            // Attach custom paint event
+            lblStatus.Paint += LblStatus_Paint;
+
+            eventPanel.Tag = new EventInfo
+            {
+                EventID = ID,
+                StartDate = startDate,
+                EndDate = endDate
+            };
+
             eventPanel.Controls.Add(lbID);
             eventPanel.Controls.Add(lblTitle);
             eventPanel.Controls.Add(lbDesc);
             eventPanel.Controls.Add(lblCategory);
-            eventPanel.Controls.Add(lblDate);
             eventPanel.Controls.Add(lblLocation);
+            eventPanel.Controls.Add(lblStatus);
+            eventPanel.Controls.Add(lblDate);
             eventPanel.Click += Panel_Click;
             flowEventsPanel.Controls.Add(eventPanel);
         }
+        private void LblStatus_Paint(object sender, PaintEventArgs e)
+        {
+            Label lbl = sender as Label;
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
 
+            Color bgColor = (Color)lbl.Tag;
 
+            using (System.Drawing.Drawing2D.GraphicsPath path = new System.Drawing.Drawing2D.GraphicsPath())
+            {
+                int radius = lbl.Height / 2;
+                path.AddArc(0, 0, radius, lbl.Height, 90, 180); // left arc
+                path.AddArc(lbl.Width - radius, 0, radius, lbl.Height, 270, 180); // right arc
+                path.CloseAllFigures();
+
+                using (SolidBrush brush = new SolidBrush(bgColor))
+                {
+                    e.Graphics.FillPath(brush, path);
+                }
+            }
+
+            // Draw text centered
+            TextRenderer.DrawText(
+                e.Graphics,
+                lbl.Text,
+                lbl.Font,
+                lbl.ClientRectangle,
+                lbl.ForeColor,
+                TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+            );
+        }
+        private string GetEventStatus(DateTime start, DateTime end)
+        {
+            DateTime now = DateTime.Now;
+
+            if (now < start)
+                return "Upcoming";
+            else if (now >= start && now <= end)
+                return "Ongoing";
+            else
+                return "Ended";
+        }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
         private void Panel_Click(object sender, EventArgs e)
         {
-            string inputPass = ShowInputDialog("Validation", "Please re-enter your password: ");
-            try
+            if (sender is Panel panel && panel.Tag is EventInfo info)
             {
-                if (inputPass.Equals(Profile_Info.Instance.getPassword()))
+                string status = GetEventStatus(info.StartDate, info.EndDate);
+
+                if (status == "Upcoming")
                 {
-                    User_Event user_Event = new User_Event();
-                    user_Event.Show();
+                    MessageBox.Show("The event hasn't started yet.");
                 }
-                else if (string.IsNullOrEmpty(inputPass))
+                else if (status == "Ongoing")
                 {
-                    return;
+                    string inputPass = ShowInputDialog("Validation", "Please re-enter your password: ");
+                    try
+                    {
+                        if (inputPass.Equals(Profile_Info.Instance.getPassword()))
+                        {
+                            User_Event user_Event = new User_Event();
+                            user_Event.Show();
+                        }
+                        else if (string.IsNullOrEmpty(inputPass))
+                        {
+                            return;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Incorrect Password");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Incorrect Password");
+                    MessageBox.Show("The event has ended.");
                 }
-            }catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
-
         }
         private void Event_page_Load(object sender, EventArgs e)
         {
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
             flowEventsPanel.AutoScroll = true;
             flowEventsPanel.WrapContents = true;
             DB db = new DB();
-            string joinQuery = "select users.ID, user_event.Event_ID, events.EventTitle, events.EventDesc, events.EventCategory, events.EventDate, events.EventSetting from users, user_event, events where users.ID = user_event.Student_ID and events.EventID=user_event.Event_ID and users.username = @username";
-           /* string joinQuery = "select users.ID, user_event.Event_ID, events.EventTitle, events.EventDesc, events.EventCategory, events.EventDate, events.EventSetting from users, user_event, events where users.ID = user_event.Student_ID and events.EventID=user_event.Event_ID";
-            string query = "SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting FROM events";*/
+            string joinQuery = @"SELECT users.ID, user_event.Event_ID, events.EventID, events.EventTitle, events.EventDesc, events.EventCategory, events.EventDate, events.EventEndDate, events.EventSetting FROM users JOIN user_event ON users.ID = user_event.Student_ID JOIN events ON events.EventID = user_event.Event_ID WHERE users.username = @username";
             using (MySqlConnection conn = db.GetConnection())
             {
                 conn.Open();
@@ -159,32 +266,29 @@ namespace QR_Generator_Test_C_
 
                 while (reader.Read())
                 {
-                    string username = reader["ID"].ToString();
-                    string eventID = reader["Event_ID"].ToString();
+                    string eventID = reader["EventID"].ToString();
                     string eventTitle = reader["EventTitle"].ToString();
                     string eventDesc = reader["EventDesc"].ToString();
                     string eventCategory = reader["EventCategory"].ToString();
-                    DateTime eventDuration = (DateTime)reader["EventDate"];
+                    DateTime startDate = (DateTime)reader["EventDate"];
+                    DateTime endDate = (DateTime)reader["EventEndDate"];
                     string eventSetting = reader["EventSetting"].ToString();
 
-                    AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, eventDuration, eventSetting);
+                    AddEventPanel(eventID, eventTitle, eventDesc, eventCategory, startDate, endDate, eventSetting);
                 }
                 conn.Close();
             }
         }
-
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void button1_Click_1(object sender, EventArgs e)
         { 
             Dashboard dashboard = new Dashboard();
             dashboard.Show();
             this.Hide();
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(TB_EventID.Text))
@@ -204,9 +308,7 @@ namespace QR_Generator_Test_C_
             string insertQuery = @"INSERT INTO user_event(Student_ID, Event_ID) 
                            VALUES (@studentID, @eventID)";
 
-            string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting 
-                                FROM events 
-                                WHERE EventID = @eventID";
+            string selectEventQuery = @"SELECT EventID, EventTitle, EventDesc, EventCategory, EventDate, EventEndDate,EventSetting FROM events WHERE EventID = @eventID";
 
             using (MySqlConnection conn = db.GetConnection())
             {
@@ -248,6 +350,7 @@ namespace QR_Generator_Test_C_
                                 reader["EventDesc"].ToString(),
                                 reader["EventCategory"].ToString(),
                                 Convert.ToDateTime(reader["EventDate"]),
+                                Convert.ToDateTime(reader["EventEndDate"]),
                                 reader["EventSetting"].ToString()
                             );
                         }
@@ -261,7 +364,5 @@ namespace QR_Generator_Test_C_
 
             TB_EventID.Clear();
         }
-
-
     }
 }

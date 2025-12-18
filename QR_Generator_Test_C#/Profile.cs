@@ -39,6 +39,9 @@ namespace QR_Generator_Test_C_
         private void Profile_Load(object sender, EventArgs e)
         {
             CenterPanel();
+            Back.FlatAppearance.BorderSize = 0;
+            Back.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            Back.FlatAppearance.MouseDownBackColor = Color.Transparent;
             string role = Profile_Info.Instance.getRole().ToLower();
             panel1.Visible = true;
             panel2.Visible = true;

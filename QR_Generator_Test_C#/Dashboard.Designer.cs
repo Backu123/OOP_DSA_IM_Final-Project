@@ -26,11 +26,11 @@
             this.profileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createAdminStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.adminCreate = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(403, 28);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.menuStrip1.Size = new System.Drawing.Size(600, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(568, 31);
             this.menuStrip1.Stretch = false;
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
@@ -124,6 +124,13 @@
             this.exitToolStripMenuItem.Text = "          ";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
+            // adminCreate
+            // 
+            this.adminCreate.Name = "adminCreate";
+            this.adminCreate.Size = new System.Drawing.Size(108, 27);
+            this.adminCreate.Text = "adminCreate";
+            this.adminCreate.Click += new System.EventHandler(this.adminCreate_Click);
+            // 
             // createAdminMenuItem
             // 
             this.createAdminMenuItem.Name = "createAdminMenuItem";
@@ -140,7 +147,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
@@ -162,13 +169,6 @@
             this.label1.Size = new System.Drawing.Size(811, 120);
             this.label1.TabIndex = 7;
             this.label1.Text = "Create an Event Now!";
-            // 
-            // adminCreate
-            // 
-            this.adminCreate.Name = "adminCreate";
-            this.adminCreate.Size = new System.Drawing.Size(108, 27);
-            this.adminCreate.Text = "adminCreate";
-            this.adminCreate.Click += new System.EventHandler(this.adminCreate_Click);
             // 
             // Dashboard
             // 

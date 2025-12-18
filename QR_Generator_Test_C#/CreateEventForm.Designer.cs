@@ -39,11 +39,13 @@
             this.CB_Category = new System.Windows.Forms.ComboBox();
             this.CB_Settings = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerStart = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TB_Title = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,7 +67,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label3.Location = new System.Drawing.Point(381, 428);
+            this.label3.Location = new System.Drawing.Point(379, 454);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(95, 20);
             this.label3.TabIndex = 2;
@@ -101,7 +103,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.label6.Location = new System.Drawing.Point(381, 382);
+            this.label6.Location = new System.Drawing.Point(379, 422);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(113, 20);
             this.label6.TabIndex = 5;
@@ -122,10 +124,10 @@
             this.TB_Desc.BackColor = System.Drawing.Color.Black;
             this.TB_Desc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.TB_Desc.ForeColor = System.Drawing.Color.White;
-            this.TB_Desc.Location = new System.Drawing.Point(385, 453);
+            this.TB_Desc.Location = new System.Drawing.Point(385, 477);
             this.TB_Desc.Multiline = true;
             this.TB_Desc.Name = "TB_Desc";
-            this.TB_Desc.Size = new System.Drawing.Size(379, 87);
+            this.TB_Desc.Size = new System.Drawing.Size(379, 63);
             this.TB_Desc.TabIndex = 8;
             // 
             // CB_Category
@@ -158,7 +160,7 @@
             "New CCS Building",
             "Campus Gymnasium",
             "Campus Field"});
-            this.CB_Settings.Location = new System.Drawing.Point(513, 377);
+            this.CB_Settings.Location = new System.Drawing.Point(511, 417);
             this.CB_Settings.Name = "CB_Settings";
             this.CB_Settings.Size = new System.Drawing.Size(251, 33);
             this.CB_Settings.TabIndex = 11;
@@ -178,20 +180,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker1
+            // dateTimePickerStart
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
-            this.dateTimePicker1.CalendarForeColor = System.Drawing.Color.Black;
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.SystemColors.ControlLightLight;
-            this.dateTimePicker1.CalendarTitleBackColor = System.Drawing.SystemColors.HotTrack;
-            this.dateTimePicker1.CalendarTitleForeColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(495, 327);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(269, 30);
-            this.dateTimePicker1.TabIndex = 13;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            this.dateTimePickerStart.CalendarFont = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.dateTimePickerStart.CalendarForeColor = System.Drawing.Color.Black;
+            this.dateTimePickerStart.CalendarMonthBackground = System.Drawing.SystemColors.ControlLightLight;
+            this.dateTimePickerStart.CalendarTitleBackColor = System.Drawing.SystemColors.HotTrack;
+            this.dateTimePickerStart.CalendarTitleForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dateTimePickerStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(495, 327);
+            this.dateTimePickerStart.Name = "dateTimePickerStart";
+            this.dateTimePickerStart.Size = new System.Drawing.Size(269, 30);
+            this.dateTimePickerStart.TabIndex = 13;
+            this.dateTimePickerStart.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // button2
             // 
@@ -246,6 +248,32 @@
             this.label7.Text = "EVENT INFO";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
+            // dateTimePickerEnd
+            // 
+            this.dateTimePickerEnd.CalendarFont = new System.Drawing.Font("MS Outlook", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            this.dateTimePickerEnd.CalendarForeColor = System.Drawing.Color.Black;
+            this.dateTimePickerEnd.CalendarMonthBackground = System.Drawing.SystemColors.ControlLightLight;
+            this.dateTimePickerEnd.CalendarTitleBackColor = System.Drawing.SystemColors.HotTrack;
+            this.dateTimePickerEnd.CalendarTitleForeColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.dateTimePickerEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(495, 373);
+            this.dateTimePickerEnd.Name = "dateTimePickerEnd";
+            this.dateTimePickerEnd.Size = new System.Drawing.Size(269, 30);
+            this.dateTimePickerEnd.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.label8.Location = new System.Drawing.Point(381, 378);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(90, 20);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Event End:";
+            // 
             // CreateEventForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -254,9 +282,11 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1280, 720);
+            this.Controls.Add(this.dateTimePickerEnd);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerStart);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CB_Settings);
             this.Controls.Add(this.CB_Category);
@@ -291,10 +321,12 @@
         private System.Windows.Forms.ComboBox CB_Category;
         private System.Windows.Forms.ComboBox CB_Settings;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerStart;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TB_Title;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
+        private System.Windows.Forms.Label label8;
     }
 }

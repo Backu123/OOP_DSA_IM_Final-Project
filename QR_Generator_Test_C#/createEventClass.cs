@@ -15,69 +15,62 @@ namespace QR_Generator_Test_C_
         private string eventTitle;
         private string eventDescription;
         private string eventCategory;
-        private DateTime eventDuration;
+        private DateTime eventStartDate;
+        private DateTime eventEndDate;
         private string eventSetting;
 
-        private static createEventClass instance;
-        public static createEventClass Instance
-        {
-            get
-            {
-                if (instance == null)
-                    instance = new createEventClass();
-                return instance;
-            }
-
-        }
-
-        public String getEventID() => eventID;
+        // GETTERS
+        public string getEventID() => eventID;
         public string getEventTitle() => eventTitle;
         public string getEventDesc() => eventDescription;
         public string getEventCategory() => eventCategory;
-        public DateTime getEventDuration() => eventDuration;
+        public DateTime getEventStartDate() => eventStartDate;
+        public DateTime getEventEndDate() => eventEndDate;
         public string getEventSetting() => eventSetting;
 
+        // SETTERS
         public void setEventID(string eventID) => this.eventID = eventID;
         public void setEventTitle(string eventTitle) => this.eventTitle = eventTitle;
         public void setEventDesc(string eventDesc) => this.eventDescription = eventDesc;
         public void setEventCategory(string eventCategory) => this.eventCategory = eventCategory;
-        public void setEventDuration(DateTime eventDuration) => this.eventDuration = eventDuration;
+        public void setEventStartDate(DateTime startDate) => this.eventStartDate = startDate;
+        public void setEventEndDate(DateTime endDate) => this.eventEndDate = endDate;
         public void setEventSetting(string eventSetting) => this.eventSetting = eventSetting;
 
-        public void InsertEvent(string ID, string title, string desc, string category, DateTime date, string setting)
+        public void InsertEvent(
+            string ID,
+            string title,
+            string desc,
+            string category,
+            DateTime startDate,
+            DateTime endDate,
+            string setting)
         {
             DB db = new DB();
             using (MySqlConnection conn = db.GetConnection())
             {
-                try
-                {
-                    conn.Open();
+                conn.Open();
 
-                    string query = "INSERT INTO events (EventID, EventTitle, EventDesc, EventCategory, EventDate, EventSetting, created_by) " +
-                                   "VALUES (@id, @title, @desc, @category, @date, @setting, @creator)";
+                string query = @"
+            INSERT INTO events
+            (EventID, EventTitle, EventDesc, EventCategory, EventDate, EventEndDate, EventSetting, created_by)
+            VALUES
+            (@id, @title, @desc, @category, @start, @end, @setting, @creator)";
 
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@creator", Profile_Info.Instance.getUsername());
-                    cmd.Parameters.AddWithValue("@id", ID);
-                    cmd.Parameters.AddWithValue("@title", title);
-                    cmd.Parameters.AddWithValue("@desc", desc);
-                    cmd.Parameters.AddWithValue("@category", category);
-                    cmd.Parameters.AddWithValue("@date", date);
-                    cmd.Parameters.AddWithValue("@setting", setting);
+                MySqlCommand cmd = new MySqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@creator", Profile_Info.Instance.getUsername());
+                cmd.Parameters.AddWithValue("@id", ID);
+                cmd.Parameters.AddWithValue("@title", title);
+                cmd.Parameters.AddWithValue("@desc", desc);
+                cmd.Parameters.AddWithValue("@category", category);
+                cmd.Parameters.AddWithValue("@start", startDate);
+                cmd.Parameters.AddWithValue("@end", endDate);
+                cmd.Parameters.AddWithValue("@setting", setting);
 
-                    cmd.ExecuteNonQuery();
-                }
-                catch (Exception ex) 
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    conn.Close();   
-                }
-                
+                cmd.ExecuteNonQuery();
             }
         }
     }
+
 
 }

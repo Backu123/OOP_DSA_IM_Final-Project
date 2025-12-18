@@ -40,6 +40,7 @@ namespace QR_Generator_Test_C_
         private void Dashboard_Load(object sender, EventArgs e)
         {
             qRGeneratingToolStripMenuItem.Visible = false;
+            
             if (Profile_Info.Instance.getRole() == "Admin")
             {
                 createEventToolStripMenuItem.Visible = true;    
@@ -52,6 +53,9 @@ namespace QR_Generator_Test_C_
                 createEventToolStripMenuItem.Visible = false;
                 createAdminMenuItem.Visible = false;
                 adminCreate.Visible = false;
+                button1.Image = Image.FromFile(@"C:\Users\ASUS\Downloads\Join.png");
+                button1.ImageAlign = ContentAlignment.MiddleCenter;
+                button1.Image = new Bitmap(button1.Image, button1.Size); // resize image to button size
             }
 
             DB db = new DB();
@@ -80,6 +84,10 @@ namespace QR_Generator_Test_C_
             {
                 db.CloseConnection();
             }
+            
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
         }
 
 

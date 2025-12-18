@@ -480,6 +480,9 @@ namespace QR_Generator_Test_C_
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
             otpTimer = new Timer();
             otpTimer.Interval = 1000; // 1 second
             otpTimer.Tick += OtpTimer_Tick;
